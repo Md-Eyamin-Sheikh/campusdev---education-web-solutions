@@ -1,0 +1,6 @@
+{
+  "name": "CampusDev — Education Web Solutions",
+  "description": "Education-focused premium web solutions platform for Schools, Colleges, Madrasas, and Coaching Institutes in Bangladesh.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
