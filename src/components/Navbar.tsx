@@ -242,10 +242,10 @@ export const Navbar: React.FC<NavbarProps> = ({
               <Logo size="responsive" />
             </button>
 
-            <span className="hidden 2xl:inline-flex items-center gap-1.5 text-[10px] font-bold text-[#0284C7] bg-sky-50/90 border border-sky-200/80 px-2.5 py-1 rounded-full shadow-2xs">
+            {/* <span className="hidden 2xl:inline-flex items-center gap-1.5 text-[10px] font-bold text-[#0284C7] bg-sky-50/90 border border-sky-200/80 px-2.5 py-1 rounded-full shadow-2xs">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
               <span>EduTech Lab</span>
-            </span>
+            </span> */}
           </div>
 
           {/* Desktop & Laptop Navigation Links (Responsive from lg 1024px+) */}
@@ -264,7 +264,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   onClick={() => handleNavClick(link.id)}
                   className={`relative px-3 xl:px-3.5 py-1.5 rounded-xl text-xs xl:text-[13px] font-semibold transition-all duration-200 cursor-pointer flex items-center gap-1.5 whitespace-nowrap ${
                     isActive
-                      ? 'bg-white text-[#0284C7] font-bold shadow-xs border border-slate-200/80'
+                      ? 'premium-nav-active text-[#0284C7] font-bold shadow-xs border border-slate-200/80'
                       : 'text-slate-600 hover:text-slate-900 hover:bg-white/60'
                   }`}
                 >
@@ -285,7 +285,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 onClick={() => setMoreDropdownOpen(!moreDropdownOpen)}
                 className={`px-2.5 xl:px-3 py-1.5 rounded-xl text-xs xl:text-[13px] font-semibold transition-all duration-200 cursor-pointer flex items-center gap-1 whitespace-nowrap ${
                   isSecondaryActive || moreDropdownOpen
-                    ? 'bg-white text-[#0284C7] font-bold shadow-xs border border-slate-200/80'
+                    ? 'premium-nav-active text-[#0284C7] font-bold shadow-xs border border-slate-200/80'
                     : 'text-slate-600 hover:text-slate-900 hover:bg-white/60'
                 }`}
                 aria-expanded={moreDropdownOpen}
@@ -356,7 +356,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div className="flex items-center gap-1.5 sm:gap-2 xl:gap-2.5 flex-shrink-0">
             
             {/* Free Audit Button - Desktop & Tablet */}
-            <button
+            {/* <button
               id="navbar-free-audit-btn"
               onClick={onOpenAudit}
               className="hidden xl:inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold text-slate-700 bg-slate-100/90 hover:bg-sky-50 hover:text-[#0284C7] hover:border-sky-200 border border-slate-200/90 transition-all cursor-pointer shadow-2xs active:scale-95 whitespace-nowrap"
@@ -367,7 +367,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 <span className="absolute -top-0.5 -right-0.5 w-1 h-1 bg-[#0284C7] rounded-full animate-ping" />
               </div>
               <span>{language === 'bn' ? 'ফ্রি স্পিড অডিট' : 'Free Speed Audit'}</span>
-            </button>
+            </button> */}
 
             {/* Language Switcher - Compact & Touch-friendly */}
             <button
@@ -390,7 +390,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
 
             {/* WhatsApp Direct Help Link */}
-            <a
+            {/* <a
               id="navbar-whatsapp-direct-link"
               href="https://wa.me/8801700000000?text=Hello%20CampusDev,%20I%20am%20interested%20in%20a%20website%20for%20our%20educational%20institution."
               target="_blank"
@@ -404,19 +404,19 @@ export const Navbar: React.FC<NavbarProps> = ({
               </div>
               <span className="hidden 2xl:inline">{language === 'bn' ? 'হোয়াটসঅ্যাপ' : 'WhatsApp'}</span>
               <span className="2xl:hidden">{language === 'bn' ? 'চ্যাট' : 'Chat'}</span>
-            </a>
+            </a> */}
 
             {/* Free Consultation CTA (Primary) - Scaled for mobile */}
-            <button
+            {/* <button
               id="navbar-consultation-cta-btn"
               onClick={onOpenConsultation}
-              className="inline-flex items-center gap-1 sm:gap-1.5 px-2 xs:px-2.5 sm:px-4 lg:px-4.5 xl:px-5 py-1.5 sm:py-2.5 rounded-lg sm:rounded-xl text-[11px] xs:text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-[#0B132B] via-[#14213d] to-[#0284C7] hover:shadow-lg hover:shadow-sky-950/25 active:scale-95 shadow-xs sm:shadow-md transition-all cursor-pointer whitespace-nowrap border border-slate-700/40 group flex-shrink-0"
+              className="premium-primary inline-flex items-center gap-1 sm:gap-1.5 px-2 xs:px-2.5 sm:px-4 lg:px-4.5 xl:px-5 py-1.5 sm:py-2.5 rounded-lg sm:rounded-xl text-[11px] xs:text-xs sm:text-sm font-bold text-white hover:shadow-lg hover:shadow-sky-950/25 active:scale-95 shadow-xs sm:shadow-md transition-all cursor-pointer whitespace-nowrap border group flex-shrink-0"
             >
               <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#38BDF8] group-hover:rotate-12 transition-transform flex-shrink-0" />
               <span className="hidden sm:inline">{language === 'bn' ? 'ফ্রি কনসালটেশন' : 'Free Consultation'}</span>
               <span className="sm:hidden">{language === 'bn' ? 'পরামর্শ' : 'Consult'}</span>
               <ArrowRight className="w-3.5 h-3.5 text-sky-300 hidden xl:inline group-hover:translate-x-0.5 transition-transform" />
-            </button>
+            </button> */}
 
             {/* Mobile / Tablet Menu Button (Visible < lg 1024px) */}
             <button
@@ -541,7 +541,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   setMobileMenuOpen(false);
                   onOpenConsultation();
                 }}
-                className="w-full flex items-center justify-center gap-2 py-3.5 rounded-2xl bg-gradient-to-r from-[#0B132B] to-[#14213d] hover:from-[#14213d] hover:to-[#0B132B] text-white text-xs sm:text-sm font-bold shadow-md cursor-pointer transition-all active:scale-[0.99]"
+                className="premium-primary w-full flex items-center justify-center gap-2 py-3.5 rounded-2xl text-white text-xs sm:text-sm font-bold shadow-md cursor-pointer transition-all active:scale-[0.99]"
               >
                 <Sparkles className="w-4 h-4 text-[#38BDF8]" />
                 <span>{language === 'bn' ? 'ফ্রি প্ল্যানিং ও কনসালটেশন বুক করুন' : 'Book Free Strategy Consultation'}</span>
@@ -553,5 +553,4 @@ export const Navbar: React.FC<NavbarProps> = ({
     </>
   );
 };
-
 

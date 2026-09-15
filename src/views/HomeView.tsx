@@ -154,14 +154,14 @@ export const HomeView: React.FC<HomeViewProps> = ({
   return (
     <div className="flex flex-col w-full">
       {/* 1. HERO SECTION - Ultra-Responsive Native App & Desktop Studio */}
-      <section className="relative overflow-hidden pt-6 sm:pt-10 md:pt-14 lg:pt-16 pb-12 sm:pb-16 lg:pb-24 bg-gradient-to-b from-white via-slate-50/40 to-white border-b border-slate-200/70">
+      <section className="premium-hero relative overflow-hidden pt-6 sm:pt-10 md:pt-14 lg:pt-16 pb-12 sm:pb-16 lg:pb-24 border-b border-slate-200/70">
         {/* Subtle educational tech grid pattern for desktop */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f018_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f018_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
+        <div className="hero-grid absolute inset-0 bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
         
         {/* Soft radial glow accents */}
-        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-r from-sky-100/60 via-cyan-50/50 to-blue-100/60 rounded-full blur-[110px] pointer-events-none" />
-        <div className="absolute top-1/3 -right-28 w-[380px] h-[380px] bg-sky-100/40 rounded-full blur-[100px] pointer-events-none" />
-        <div className="absolute top-1/2 -left-28 w-[350px] h-[350px] bg-indigo-50/40 rounded-full blur-[100px] pointer-events-none" />
+        <div className="hero-ambient hero-ambient-top absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full blur-[110px] pointer-events-none" />
+        <div className="hero-ambient hero-ambient-right absolute top-1/3 -right-28 w-[380px] h-[380px] rounded-full blur-[100px] pointer-events-none" />
+        <div className="hero-ambient hero-ambient-left absolute top-1/2 -left-28 w-[350px] h-[350px] rounded-full blur-[100px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col items-center text-center max-w-4xl lg:max-w-5xl mx-auto">
@@ -180,7 +180,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
             </div>
 
             {/* Headline with High-Impact Desktop Typography */}
-            <h1 className="text-[28px] xs:text-[32px] sm:text-4xl md:text-5xl lg:text-[54px] xl:text-[60px] font-black font-heading text-[#0B1C30] tracking-tight mb-4 sm:mb-6 leading-[1.25] sm:leading-[1.18] lg:leading-[1.12] text-balance">
+            <h1 className="premium-hero-title text-[28px] xs:text-[32px] sm:text-4xl md:text-5xl lg:text-[54px] xl:text-[60px] font-black font-heading text-[#0B1C30] tracking-tight mb-4 sm:mb-6 leading-[1.25] sm:leading-[1.18] lg:leading-[1.12] text-balance">
               {language === 'bn' ? (
                 <>
                   আপনার শিক্ষা প্রতিষ্ঠানকে ডিজিটালে আরও{' '}
@@ -212,7 +212,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
               <button
                 id="hero-consultation-cta-btn"
                 onClick={onOpenConsultation}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 sm:px-8 lg:px-9 py-3.5 sm:py-4 rounded-2xl bg-gradient-to-r from-[#0B132B] via-[#111e3b] to-[#0284C7] hover:shadow-xl hover:shadow-sky-950/20 active:scale-[0.98] transition-all cursor-pointer border border-slate-700/60 group text-white text-sm sm:text-base font-bold shadow-lg"
+                className="premium-primary w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 sm:px-8 lg:px-9 py-3.5 sm:py-4 rounded-2xl hover:shadow-xl hover:shadow-sky-950/20 active:scale-[0.98] transition-all cursor-pointer border group text-white text-sm sm:text-base font-bold shadow-lg"
               >
                 <Sparkles className="w-4 h-4 text-[#38BDF8] group-hover:rotate-12 transition-transform" />
                 <span>{language === 'bn' ? 'ফ্রি কনসালটেশন নিন' : 'Get Free Consultation'}</span>
@@ -222,7 +222,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
               <button
                 id="hero-view-works-btn"
                 onClick={() => onNavigate('works')}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 sm:py-4 rounded-2xl bg-white hover:bg-slate-50 text-slate-800 text-sm sm:text-base font-bold border border-slate-300 active:scale-[0.98] transition-all cursor-pointer shadow-2xs hover:shadow-md hover:border-slate-400"
+                className="premium-secondary w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 sm:py-4 rounded-2xl hover:bg-slate-50 text-slate-800 text-sm sm:text-base font-bold border active:scale-[0.98] transition-all cursor-pointer shadow-2xs hover:shadow-md hover:border-slate-400"
               >
                 <Play className="w-4 h-4 text-[#0284C7] fill-[#0284C7]/20" />
                 <span>{language === 'bn' ? 'আমাদের কাজ দেখুন' : 'View Our Work'}</span>
