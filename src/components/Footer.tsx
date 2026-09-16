@@ -32,9 +32,9 @@ export const Footer: React.FC<FooterProps> = ({
     <footer className="w-full bg-[#070D1E] text-slate-300 pt-6 sm:pt-10 md:pt-14 pb-20 sm:pb-24 md:pb-12 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top 4 Trust Value Cards */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 p-4 sm:p-6 rounded-2xl bg-[#0B132B]/80 border border-slate-800/80 mb-8 sm:mb-12 md:mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 p-4 sm:p-6 rounded-2xl bg-[#0e0520]/80 border border-slate-800/80 mb-8 sm:mb-12 md:mb-16">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-[#38BDF8]">
+            <div className="w-10 h-10 rounded-xl bg-fuchsia-500/10 border border-fuchsia-500/20 flex items-center justify-center text-violet-300">
               <Smartphone className="w-5 h-5" />
             </div>
             <div>
@@ -103,15 +103,15 @@ export const Footer: React.FC<FooterProps> = ({
 
             <div className="flex flex-col gap-2 pt-2 text-xs text-slate-400">
               <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-[#38BDF8]" />
+                <MapPin className="w-4 h-4 text-violet-300" />
                 <span>ধানমন্ডি ও উত্তরা, ঢাকা, বাংলাদেশ</span>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-[#38BDF8]" />
+                <Mail className="w-4 h-4 text-violet-300" />
                 <span>contact@campusdev.com.bd</span>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-[#38BDF8]" />
+                <Phone className="w-4 h-4 text-violet-300" />
                 <span>+৮৮০১৭১০-০০০০০০ (সরাসরি হটলাইন)</span>
               </div>
             </div>
@@ -182,7 +182,7 @@ export const Footer: React.FC<FooterProps> = ({
               </button>
               <button 
                 onClick={() => onNavigate('admin-demo')} 
-                className="text-left text-[#38BDF8] font-semibold hover:underline cursor-pointer"
+                className="text-left text-violet-300 font-semibold hover:underline cursor-pointer"
               >
                 {language === 'bn' ? 'অ্যাডমিন ড্যাশবোর্ড টেস্ট ড্রাইভ' : 'Admin Panel Test Drive'}
               </button>
@@ -236,7 +236,7 @@ export const Footer: React.FC<FooterProps> = ({
         </div>
 
         {/* Client Website Passive Branding Showcase (Section #26) */}
-        <div className="p-4 rounded-xl bg-[#0B132B]/50 border border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 mb-8 text-xs text-slate-400">
+        <div className="p-4 rounded-xl bg-[#0e0520]/50 border border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 mb-8 text-xs text-slate-400">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-emerald-400" />
             <span>
@@ -250,7 +250,7 @@ export const Footer: React.FC<FooterProps> = ({
           </div>
           <button 
             onClick={onOpenConsultation}
-            className="text-[#38BDF8] hover:underline font-semibold cursor-pointer"
+            className="text-violet-300 hover:underline font-semibold cursor-pointer"
           >
             {language === 'bn' ? 'আপনার প্রতিষ্ঠানের জন্য ওয়েবসাইট তৈরি করুন →' : 'Launch for your school →'}
           </button>

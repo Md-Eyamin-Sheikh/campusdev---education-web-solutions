@@ -142,7 +142,7 @@ export const AdminDemoInteractive: React.FC<AdminDemoInteractiveProps> = ({
   return (
     <div className="w-full bg-white rounded-2xl sm:rounded-3xl border border-slate-200/80 shadow-xl overflow-hidden">
       {/* Top OS Simulation Bar */}
-      <div className="bg-[#0B132B] px-4 sm:px-6 py-3.5 flex flex-wrap items-center justify-between gap-3 text-white">
+      <div className="bg-[#0e0520] px-4 sm:px-6 py-3.5 flex flex-wrap items-center justify-between gap-3 text-white">
         <div className="flex items-center gap-2.5">
           <div className="flex items-center gap-1.5">
             <span className="w-3 h-3 rounded-full bg-rose-500 inline-block" />
@@ -168,7 +168,7 @@ export const AdminDemoInteractive: React.FC<AdminDemoInteractiveProps> = ({
       {/* Admin Panel Header */}
       <div className="p-4 sm:p-6 bg-slate-50 border-b border-slate-200 flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 rounded-xl bg-[#0B132B] text-[#38BDF8] flex items-center justify-center font-bold font-heading text-lg shadow-sm">
+          <div className="w-12 h-12 rounded-xl bg-[#0e0520] text-violet-300 flex items-center justify-center font-bold font-heading text-lg shadow-sm">
             AM
           </div>
           <div>
@@ -176,7 +176,7 @@ export const AdminDemoInteractive: React.FC<AdminDemoInteractiveProps> = ({
               <h3 className="text-base sm:text-lg font-bold text-[#0B1C30]">
                 এপেক্স রেসিডেনসিয়াল মডেল স্কুল ও কলেজ
               </h3>
-              <span className="px-2 py-0.5 rounded bg-sky-100 text-[#0284C7] text-[10px] font-bold uppercase">
+              <span className="px-2 py-0.5 rounded bg-fuchsia-950/30 text-fuchsia-400 text-[10px] font-bold uppercase">
                 Admin
               </span>
             </div>
@@ -192,13 +192,13 @@ export const AdminDemoInteractive: React.FC<AdminDemoInteractiveProps> = ({
             onClick={() => setActiveTab('notices')}
             className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-colors cursor-pointer flex items-center gap-1.5 ${
               activeTab === 'notices'
-                ? 'bg-[#0B132B] text-white'
+                ? 'bg-[#0e0520] text-white'
                 : 'text-slate-600 hover:text-[#0B1C30]'
             }`}
           >
             <FileText className="w-3.5 h-3.5" />
             <span>{language === 'bn' ? 'নোটিশ বোর্ড' : 'Notices'}</span>
-            <span className="px-1.5 py-0.2 rounded-full text-[10px] bg-sky-500/20 text-[#38BDF8]">
+            <span className="px-1.5 py-0.2 rounded-full text-[10px] bg-violet-500/20 text-violet-300">
               {notices.length}
             </span>
           </button>
@@ -207,7 +207,7 @@ export const AdminDemoInteractive: React.FC<AdminDemoInteractiveProps> = ({
             onClick={() => setActiveTab('admissions')}
             className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-colors cursor-pointer flex items-center gap-1.5 ${
               activeTab === 'admissions'
-                ? 'bg-[#0B132B] text-white'
+                ? 'bg-[#0e0520] text-white'
                 : 'text-slate-600 hover:text-[#0B1C30]'
             }`}
           >
@@ -222,7 +222,7 @@ export const AdminDemoInteractive: React.FC<AdminDemoInteractiveProps> = ({
             onClick={() => setActiveTab('results')}
             className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-colors cursor-pointer flex items-center gap-1.5 ${
               activeTab === 'results'
-                ? 'bg-[#0B132B] text-white'
+                ? 'bg-[#0e0520] text-white'
                 : 'text-slate-600 hover:text-[#0B1C30]'
             }`}
           >
@@ -250,7 +250,7 @@ export const AdminDemoInteractive: React.FC<AdminDemoInteractiveProps> = ({
                 </div>
                 <button
                   onClick={() => setShowNoticeForm(!showNoticeForm)}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#0284C7] text-white text-xs font-semibold hover:bg-sky-600 shadow-sm transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-fuchsia-600 text-white text-xs font-semibold hover:bg-fuchsia-500 shadow-sm transition-colors cursor-pointer"
                 >
                   <Plus className="w-3.5 h-3.5" />
                   <span>{language === 'bn' ? '+ নতুন নোটিশ' : '+ New Notice'}</span>
@@ -295,7 +295,7 @@ export const AdminDemoInteractive: React.FC<AdminDemoInteractiveProps> = ({
                       placeholder="উদা: আগামী সোমবারের বিশেষ ক্লাস টেস্ট সংক্রান্ত..."
                       value={newNoticeTitle}
                       onChange={(e) => setNewNoticeTitle(e.target.value)}
-                      className="w-full px-3 py-2 text-xs rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#0284C7] bg-white"
+                      className="w-full px-3 py-2 text-xs rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-fuchsia-600 bg-white"
                     />
                   </div>
 
@@ -307,7 +307,7 @@ export const AdminDemoInteractive: React.FC<AdminDemoInteractiveProps> = ({
                       <select
                         value={newNoticeCategory}
                         onChange={(e) => setNewNoticeCategory(e.target.value as any)}
-                        className="w-full px-3 py-2 text-xs rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#0284C7] bg-white"
+                        className="w-full px-3 py-2 text-xs rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-fuchsia-600 bg-white"
                       >
                         <option value="academic">একাডেমিক</option>
                         <option value="exam">পরীক্ষা</option>
@@ -321,7 +321,7 @@ export const AdminDemoInteractive: React.FC<AdminDemoInteractiveProps> = ({
                         পিডিএফ ফাইল (ঐচ্ছিক):
                       </label>
                       <div className="px-3 py-2 text-xs rounded-lg border border-dashed border-slate-300 bg-white text-slate-500 flex items-center gap-1.5 cursor-pointer">
-                        <Upload className="w-3.5 h-3.5 text-[#0284C7]" />
+                        <Upload className="w-3.5 h-3.5 text-fuchsia-400" />
                         <span>circular_2025.pdf</span>
                       </div>
                     </div>
@@ -329,9 +329,9 @@ export const AdminDemoInteractive: React.FC<AdminDemoInteractiveProps> = ({
 
                   <button
                     type="submit"
-                    className="w-full py-2 rounded-lg bg-[#0B132B] text-white text-xs font-bold hover:bg-[#14213d] flex items-center justify-center gap-1.5 cursor-pointer mt-1"
+                    className="w-full py-2 rounded-lg bg-[#0e0520] text-white text-xs font-bold hover:bg-[#14213d] flex items-center justify-center gap-1.5 cursor-pointer mt-1"
                   >
-                    <Check className="w-3.5 h-3.5 text-[#38BDF8]" />
+                    <Check className="w-3.5 h-3.5 text-violet-300" />
                     <span>{language === 'bn' ? 'এখনই ওয়েবসাইটে পাবলিশ করুন' : 'Publish to Live Site'}</span>
                   </button>
                 </form>
@@ -342,10 +342,10 @@ export const AdminDemoInteractive: React.FC<AdminDemoInteractiveProps> = ({
                 {notices.map((n) => (
                   <div
                     key={n.id}
-                    className="p-3.5 rounded-xl bg-white border border-slate-200 hover:border-sky-300 transition-colors flex items-start justify-between gap-3 shadow-2xs"
+                    className="p-3.5 rounded-xl bg-white border border-slate-200 hover:border-fuchsia-500/30 transition-colors flex items-start justify-between gap-3 shadow-2xs"
                   >
                     <div className="flex items-start gap-2.5">
-                      <div className="w-8 h-8 rounded-lg bg-sky-50 border border-sky-200 text-[#0284C7] flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <div className="w-8 h-8 rounded-lg bg-fuchsia-950/20 border border-fuchsia-500/20 text-fuchsia-400 flex items-center justify-center flex-shrink-0 mt-0.5">
                         <FileText className="w-4 h-4" />
                       </div>
                       <div>
@@ -353,7 +353,7 @@ export const AdminDemoInteractive: React.FC<AdminDemoInteractiveProps> = ({
                           <span className="text-[11px] font-semibold text-slate-400">
                             {n.date}
                           </span>
-                          <span className="px-2 py-0.2 rounded-full text-[10px] font-semibold bg-sky-100 text-[#0284C7]">
+                          <span className="px-2 py-0.2 rounded-full text-[10px] font-semibold bg-fuchsia-950/30 text-fuchsia-400">
                             {n.category === 'exam' ? 'পরীক্ষা' : n.category === 'admission' ? 'ভর্তি' : n.category === 'holiday' ? 'ছুটি' : 'একাডেমিক'}
                           </span>
                           <span className="inline-flex items-center gap-1 text-[10px] text-emerald-600 font-bold">
@@ -371,7 +371,7 @@ export const AdminDemoInteractive: React.FC<AdminDemoInteractiveProps> = ({
                       <span className="text-[11px] text-slate-400 font-mono">
                         {n.downloads} বার ডাউনলোড
                       </span>
-                      <span className="text-[11px] text-[#0284C7] font-semibold mt-1">
+                      <span className="text-[11px] text-fuchsia-400 font-semibold mt-1">
                         এডিট
                       </span>
                     </div>
@@ -385,9 +385,9 @@ export const AdminDemoInteractive: React.FC<AdminDemoInteractiveProps> = ({
           {activeTab === 'admissions' && (
             <div className="flex flex-col gap-4">
               <div className="grid grid-cols-3 gap-3">
-                <div className="p-4 rounded-xl bg-sky-50 border border-sky-100 text-center">
-                  <p className="text-xs text-sky-700 font-medium">মোট আবেদন</p>
-                  <p className="text-xl font-bold font-heading text-[#0284C7]">৩২৪ জন</p>
+                <div className="p-4 rounded-xl bg-fuchsia-950/20 border border-fuchsia-500/10 text-center">
+                  <p className="text-xs text-violet-700 font-medium">মোট আবেদন</p>
+                  <p className="text-xl font-bold font-heading text-fuchsia-400">৩২৪ জন</p>
                 </div>
                 <div className="p-4 rounded-xl bg-emerald-50 border border-emerald-100 text-center">
                   <p className="text-xs text-emerald-700 font-medium">যাচাইকৃত</p>
@@ -410,9 +410,9 @@ export const AdminDemoInteractive: React.FC<AdminDemoInteractiveProps> = ({
                 </div>
                 <button 
                   onClick={() => alert('সিএসভি/এক্সেল ফাইল স্বয়ংক্রিয়ভাবে ডাউনলোড সম্পন্ন হয়েছে!')}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#0B132B] text-white text-xs font-semibold hover:bg-slate-800 cursor-pointer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#0e0520] text-white text-xs font-semibold hover:bg-slate-800 cursor-pointer"
                 >
-                  <Download className="w-3.5 h-3.5 text-[#38BDF8]" />
+                  <Download className="w-3.5 h-3.5 text-violet-300" />
                   <span>Export CSV</span>
                 </button>
               </div>
@@ -446,9 +446,9 @@ export const AdminDemoInteractive: React.FC<AdminDemoInteractiveProps> = ({
           {/* TAB 3: RESULTS PORTAL MANAGEMENT */}
           {activeTab === 'results' && (
             <div className="flex flex-col gap-4">
-              <div className="p-4 rounded-xl bg-sky-50/70 border border-sky-200 flex flex-col sm:flex-row items-center justify-between gap-3">
+              <div className="p-4 rounded-xl bg-fuchsia-950/20 border border-fuchsia-500/20 flex flex-col sm:flex-row items-center justify-between gap-3">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-[#0284C7] text-white flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-lg bg-fuchsia-600 text-white flex items-center justify-center">
                     <Upload className="w-5 h-5" />
                   </div>
                   <div>
@@ -462,7 +462,7 @@ export const AdminDemoInteractive: React.FC<AdminDemoInteractiveProps> = ({
                 </div>
                 <button 
                   onClick={() => alert('এক্সেল শিট সফলভাবে ডাটাবেজে সিঙ্ক হয়েছে!')}
-                  className="px-3.5 py-1.5 rounded-lg bg-[#0B132B] text-white text-xs font-semibold whitespace-nowrap cursor-pointer hover:bg-slate-800"
+                  className="px-3.5 py-1.5 rounded-lg bg-[#0e0520] text-white text-xs font-semibold whitespace-nowrap cursor-pointer hover:bg-slate-800"
                 >
                   ফাইল সিলেক্ট করুন
                 </button>
@@ -479,11 +479,11 @@ export const AdminDemoInteractive: React.FC<AdminDemoInteractiveProps> = ({
                     placeholder="রোল নম্বর (১০১, ১০২, ১০৩, ১০৪, ১০৫)"
                     value={searchRoll}
                     onChange={(e) => setSearchRoll(e.target.value)}
-                    className="flex-1 px-3 py-1.5 text-xs rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#0284C7]"
+                    className="flex-1 px-3 py-1.5 text-xs rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-fuchsia-600"
                   />
                   <button
                     type="submit"
-                    className="px-4 py-1.5 rounded-lg bg-[#0284C7] text-white text-xs font-semibold hover:bg-sky-600 cursor-pointer flex items-center gap-1"
+                    className="px-4 py-1.5 rounded-lg bg-fuchsia-600 text-white text-xs font-semibold hover:bg-fuchsia-500 cursor-pointer flex items-center gap-1"
                   >
                     <Search className="w-3.5 h-3.5" />
                     <span>রেজাল্ট দেখুন</span>
@@ -533,7 +533,7 @@ export const AdminDemoInteractive: React.FC<AdminDemoInteractiveProps> = ({
         <div className="lg:col-span-5 flex flex-col gap-3">
           <div className="flex items-center justify-between">
             <span className="text-xs font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
-              <Eye className="w-3.5 h-3.5 text-[#0284C7]" />
+              <Eye className="w-3.5 h-3.5 text-fuchsia-400" />
               <span>লাইভ ওয়েবসাইট ভিউ (অভিভাবকের স্ক্রিন)</span>
             </span>
             <span className="text-[11px] font-semibold text-emerald-600 flex items-center gap-1">
@@ -546,7 +546,7 @@ export const AdminDemoInteractive: React.FC<AdminDemoInteractiveProps> = ({
           <div className="p-4 rounded-2xl bg-slate-100 border border-slate-300 shadow-inner flex flex-col gap-3">
             {/* Live School Card */}
             <div className="p-3 rounded-xl bg-white shadow-xs border border-slate-200 flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-[#0B132B] text-white flex items-center justify-center text-xs font-bold">
+              <div className="w-8 h-8 rounded-lg bg-[#0e0520] text-white flex items-center justify-center text-xs font-bold">
                 AM
               </div>
               <div className="flex-1">
@@ -555,15 +555,15 @@ export const AdminDemoInteractive: React.FC<AdminDemoInteractiveProps> = ({
                 </p>
                 <p className="text-[10px] text-slate-500">অনলাইন পোর্টাল</p>
               </div>
-              <span className="px-2 py-0.5 rounded bg-sky-100 text-[#0284C7] text-[10px] font-bold">
+              <span className="px-2 py-0.5 rounded bg-fuchsia-950/30 text-fuchsia-400 text-[10px] font-bold">
                 ভর্তি চলছে
               </span>
             </div>
 
             {/* Live Synchronized Notice Ticker */}
-            <div className="p-3 rounded-xl bg-sky-50/80 border border-sky-200 flex flex-col gap-2">
+            <div className="p-3 rounded-xl bg-fuchsia-950/20 border border-fuchsia-500/20 flex flex-col gap-2">
               <div className="flex items-center justify-between">
-                <span className="text-[11px] font-bold text-[#0284C7] flex items-center gap-1">
+                <span className="text-[11px] font-bold text-fuchsia-400 flex items-center gap-1">
                   📢 সর্বশেষ নোটিশ:
                 </span>
                 <span className="text-[10px] text-slate-400">আজকের আপডেট</span>
@@ -571,9 +571,9 @@ export const AdminDemoInteractive: React.FC<AdminDemoInteractiveProps> = ({
               <p className="text-xs font-semibold text-[#0B1C30] leading-snug line-clamp-2">
                 {notices[0]?.title || 'কোনো নোটিশ নেই'}
               </p>
-              <div className="flex items-center justify-between text-[10px] text-slate-500 pt-1 border-t border-sky-100">
+              <div className="flex items-center justify-between text-[10px] text-slate-500 pt-1 border-t border-fuchsia-500/10">
                 <span>{notices[0]?.date}</span>
-                <span className="text-[#0284C7] font-bold flex items-center gap-1">
+                <span className="text-fuchsia-400 font-bold flex items-center gap-1">
                   পিডিএফ ডাউনলোড <ArrowRight className="w-3 h-3" />
                 </span>
               </div>
@@ -589,7 +589,7 @@ export const AdminDemoInteractive: React.FC<AdminDemoInteractiveProps> = ({
               <div className="p-2.5 rounded-lg bg-white border border-slate-200 flex flex-col gap-1">
                 <span className="text-[10px] text-slate-400 font-medium">ফলাফল আর্কাইভ</span>
                 <span className="font-bold text-slate-800 text-xs">টার্মিনাল রেজাল্ট</span>
-                <span className="text-[10px] text-[#0284C7] font-semibold">অনলাইনে রেডি</span>
+                <span className="text-[10px] text-fuchsia-400 font-semibold">অনলাইনে রেডি</span>
               </div>
             </div>
 
@@ -601,9 +601,9 @@ export const AdminDemoInteractive: React.FC<AdminDemoInteractiveProps> = ({
           </div>
 
           {/* Bottom CTA within demo */}
-          <div className="p-4 rounded-xl bg-[#0B132B] text-white flex flex-col gap-2 mt-2 shadow-md">
+          <div className="p-4 rounded-xl bg-[#0e0520] text-white flex flex-col gap-2 mt-2 shadow-md">
             <div className="flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-[#38BDF8]" />
+              <Sparkles className="w-4 h-4 text-violet-300" />
               <span className="text-xs font-bold">
                 {language === 'bn' ? 'নিজ চোখে ড্যাশবোর্ড পরীক্ষা করুন' : 'Test Admin Controls Live'}
               </span>
@@ -615,7 +615,7 @@ export const AdminDemoInteractive: React.FC<AdminDemoInteractiveProps> = ({
             </p>
             <button
               onClick={onOpenConsultation}
-              className="mt-1 py-2 rounded-lg bg-[#0284C7] hover:bg-sky-500 text-white text-xs font-bold transition-colors cursor-pointer"
+              className="mt-1 py-2 rounded-lg bg-fuchsia-600 hover:bg-fuchsia-500 text-white text-xs font-bold transition-colors cursor-pointer"
             >
               {language === 'bn' ? 'অ্যাডমিন ডেমো এক্সেস চান? কথা বলুন' : 'Request Admin Demo Credentials'}
             </button>

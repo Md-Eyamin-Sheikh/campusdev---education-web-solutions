@@ -86,7 +86,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
       principal: 'প্রফেসর মো: শহিদুল ইসলাম',
       principalRole: 'অধ্যক্ষ (ভারপ্রাপ্ত)',
       principalMsg: 'আধুনিক বিশ্বের উপযোগী দক্ষ ও নীতিবান নাগরিক হিসেবে শিক্ষার্থীদের গড়ে তোলাই আমাদের অঙ্গীকার।',
-      badgeColor: 'bg-sky-50 text-[#0284C7] border-sky-200'
+      badgeColor: 'bg-fuchsia-950/30 text-fuchsia-400 border-fuchsia-500/20'
     },
     college: {
       name: 'গ্রীনফিল্ড আইডিয়াল কলেজ',
@@ -158,21 +158,29 @@ export const HomeView: React.FC<HomeViewProps> = ({
         {/* Subtle educational tech grid pattern for desktop */}
         <div className="hero-grid absolute inset-0 bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
         
+        {/* Star particles */}
+        <div className="cyber-star-particles" />
+
         {/* Soft radial glow accents */}
         <div className="hero-ambient hero-ambient-top absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full blur-[110px] pointer-events-none" />
         <div className="hero-ambient hero-ambient-right absolute top-1/3 -right-28 w-[380px] h-[380px] rounded-full blur-[100px] pointer-events-none" />
         <div className="hero-ambient hero-ambient-left absolute top-1/2 -left-28 w-[350px] h-[350px] rounded-full blur-[100px] pointer-events-none" />
 
+        {/* Circuit grid at bottom */}
+        <div className="cyber-circuit-grid" />
+        {/* Abstract CSS skyline */}
+        <div className="cyber-skyline" />
+
         <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col items-center text-center max-w-4xl lg:max-w-5xl mx-auto">
             
             {/* Pill Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 sm:px-4.5 py-1.5 rounded-full bg-sky-50/95 border border-sky-200/90 shadow-2xs mb-4 sm:mb-6 max-w-[96vw]">
+            <div className="inline-flex items-center gap-2 px-3.5 sm:px-4.5 py-1.5 rounded-full bg-fuchsia-950/40 border border-fuchsia-500/25 shadow-2xs mb-4 sm:mb-6 max-w-[96vw] backdrop-blur-sm">
               <span className="flex h-2 w-2 relative flex-shrink-0">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
               </span>
-              <span className="text-[11px] sm:text-xs font-bold text-[#0284C7] tracking-tight truncate">
+              <span className="text-[11px] sm:text-xs font-bold text-fuchsia-300 tracking-tight truncate">
                 {language === 'bn' 
                   ? 'এডুকেশন ওয়েব সল্যুশন প্ল্যাটফর্ম • ৫০+ ক্যাম্পাস' 
                   : 'Specialized Education Web Platform • 50+ Campuses'}
@@ -184,7 +192,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
               {language === 'bn' ? (
                 <>
                   আপনার শিক্ষা প্রতিষ্ঠানকে ডিজিটালে আরও{' '}
-                  <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-[#0284C7] via-[#0EA5E9] to-sky-700 drop-shadow-2xs">
+                  <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 via-violet-400 to-purple-500 drop-shadow-2xs">
                     আধুনিক ও পেশাদারভাবে
                   </span>{' '}
                   উপস্থাপন করুন।
@@ -192,7 +200,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
               ) : (
                 <>
                   Present Your Educational Institution{' '}
-                  <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-[#0284C7] via-[#0EA5E9] to-sky-700">
+                  <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 via-violet-400 to-purple-500">
                     Modern & Professional
                   </span>{' '}
                   in Digital Era.
@@ -212,11 +220,11 @@ export const HomeView: React.FC<HomeViewProps> = ({
               <button
                 id="hero-consultation-cta-btn"
                 onClick={onOpenConsultation}
-                className="premium-primary w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 sm:px-8 lg:px-9 py-3.5 sm:py-4 rounded-2xl hover:shadow-xl hover:shadow-sky-950/20 active:scale-[0.98] transition-all cursor-pointer border group text-white text-sm sm:text-base font-bold shadow-lg"
+                className="premium-primary w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 sm:px-8 lg:px-9 py-3.5 sm:py-4 rounded-2xl hover:shadow-xl hover:shadow-fuchsia-950/20 active:scale-[0.98] transition-all cursor-pointer border group text-white text-sm sm:text-base font-bold shadow-lg"
               >
-                <Sparkles className="w-4 h-4 text-[#38BDF8] group-hover:rotate-12 transition-transform" />
+                <Sparkles className="w-4 h-4 text-violet-300 group-hover:rotate-12 transition-transform" />
                 <span>{language === 'bn' ? 'ফ্রি কনসালটেশন নিন' : 'Get Free Consultation'}</span>
-                <ArrowRight className="w-4 h-4 text-sky-200 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 text-violet-200 group-hover:translate-x-1 transition-transform" />
               </button>
 
               <button
@@ -224,7 +232,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 onClick={() => onNavigate('works')}
                 className="premium-secondary w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 sm:py-4 rounded-2xl hover:bg-slate-50 text-slate-800 text-sm sm:text-base font-bold border active:scale-[0.98] transition-all cursor-pointer shadow-2xs hover:shadow-md hover:border-slate-400"
               >
-                <Play className="w-4 h-4 text-[#0284C7] fill-[#0284C7]/20" />
+                <Play className="w-4 h-4 text-fuchsia-400 fill-fuchsia-500/20" />
                 <span>{language === 'bn' ? 'আমাদের কাজ দেখুন' : 'View Our Work'}</span>
               </button>
             </div>
@@ -251,10 +259,10 @@ export const HomeView: React.FC<HomeViewProps> = ({
             <div className="w-full max-w-xl lg:max-w-2xl mx-auto mb-4 sm:mb-6 px-1">
               <div className="flex items-center justify-between text-xs font-bold text-slate-500 mb-2 px-1">
                 <span className="flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-[#0284C7]" />
+                  <span className="w-2 h-2 rounded-full bg-fuchsia-600" />
                   {language === 'bn' ? 'লাইভ ক্যাম্পাস ডেমো সিলেক্ট করুন:' : 'Select Live Campus Demo:'}
                 </span>
-                <span className="text-[#0284C7] font-semibold flex items-center gap-1">
+                <span className="text-fuchsia-400 font-semibold flex items-center gap-1">
                   <Sparkles className="w-3 h-3" />
                   {language === 'bn' ? 'ইন্টারেক্টিভ প্রিভিউ' : 'Interactive Preview'}
                 </span>
@@ -275,11 +283,11 @@ export const HomeView: React.FC<HomeViewProps> = ({
                       onClick={() => setHeroActiveTab(tab.id as any)}
                       className={`flex items-center justify-center gap-1 sm:gap-1.5 py-2 sm:py-2.5 px-1 sm:px-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
                         isActive
-                          ? 'bg-white text-[#0284C7] shadow-xs border border-slate-200/80 scale-[1.01]'
+                          ? 'bg-white text-fuchsia-400 shadow-xs border border-slate-200/80 scale-[1.01]'
                           : 'text-slate-600 hover:text-slate-900 hover:bg-white/50'
                       }`}
                     >
-                      <span className={isActive ? 'text-[#0284C7]' : 'text-slate-400'}>{tab.icon}</span>
+                      <span className={isActive ? 'text-fuchsia-400' : 'text-slate-400'}>{tab.icon}</span>
                       <span className="truncate">{language === 'bn' ? tab.labelBn : tab.labelEn}</span>
                     </button>
                   );
@@ -294,11 +302,11 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 onClick={() => setHeroDeviceMode('desktop')}
                 className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer active:scale-95 ${
                   heroDeviceMode === 'desktop'
-                    ? 'bg-[#0B132B] text-white shadow-xs'
+                    ? 'bg-[#0e0520] text-white shadow-xs'
                     : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                 }`}
               >
-                <Monitor className="w-3.5 h-3.5 text-[#38BDF8]" />
+                <Monitor className="w-3.5 h-3.5 text-violet-300" />
                 <span>{language === 'bn' ? '💻 কম্পিউটার ভিউ' : '💻 Desktop View'}</span>
               </button>
 
@@ -307,11 +315,11 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 onClick={() => setHeroDeviceMode('mobile')}
                 className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer active:scale-95 ${
                   heroDeviceMode === 'mobile'
-                    ? 'bg-[#0B132B] text-white shadow-xs'
+                    ? 'bg-[#0e0520] text-white shadow-xs'
                     : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                 }`}
               >
-                <Smartphone className="w-3.5 h-3.5 text-[#38BDF8]" />
+                <Smartphone className="w-3.5 h-3.5 text-violet-300" />
                 <span>{language === 'bn' ? '📱 মোবাইল অ্যাপ ভিউ' : '📱 Mobile App View'}</span>
               </button>
             </div>
@@ -334,7 +342,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
             {/* Metric Floating Pill Right (Desktop Only) */}
             <div className="hidden lg:flex items-center gap-3 absolute -top-5 -right-4 xl:-right-6 z-20 px-4 py-3 rounded-2xl bg-white/95 backdrop-blur-md shadow-xl border border-slate-200/80">
-              <div className="w-10 h-10 rounded-xl bg-sky-50 text-[#0284C7] flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl bg-fuchsia-950/30 text-fuchsia-400 flex items-center justify-center">
                 <ShieldCheck className="w-5 h-5" />
               </div>
               <div className="text-left">
@@ -369,7 +377,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                     {/* Mobile App Header */}
                     <div className="bg-white p-3 border-b border-slate-200 flex items-center justify-between">
                       <div className="flex items-center gap-2 min-w-0">
-                        <div className="w-8 h-8 rounded-xl bg-[#0B132B] text-[#38BDF8] flex items-center justify-center font-bold text-xs flex-shrink-0 shadow-xs">
+                        <div className="w-8 h-8 rounded-xl bg-[#0e0520] text-violet-300 flex items-center justify-center font-bold text-xs flex-shrink-0 shadow-xs">
                           {currentInst.shortName}
                         </div>
                         <div className="min-w-0">
@@ -388,8 +396,8 @@ export const HomeView: React.FC<HomeViewProps> = ({
                     </div>
 
                     {/* Notice Marquee Ticker */}
-                    <div className="bg-sky-50/90 border-b border-sky-100 px-3 py-1.5 flex items-center gap-2 text-[11px]">
-                      <span className="px-1.5 py-0.2 rounded bg-[#0B132B] text-white font-bold text-[9px] flex-shrink-0">
+                    <div className="bg-fuchsia-950/30/90 border-b border-fuchsia-500/10 px-3 py-1.5 flex items-center gap-2 text-[11px]">
+                      <span className="px-1.5 py-0.2 rounded bg-[#0e0520] text-white font-bold text-[9px] flex-shrink-0">
                         নোটিশ
                       </span>
                       <p className="text-slate-700 font-medium truncate text-[10.5px]">
@@ -400,8 +408,8 @@ export const HomeView: React.FC<HomeViewProps> = ({
                     {/* 4 Native App Quick-Action Tiles */}
                     <div className="p-3 bg-white border-b border-slate-100">
                       <div className="grid grid-cols-4 gap-2 text-center">
-                        <div className="flex flex-col items-center gap-1 p-1.5 rounded-xl bg-sky-50 hover:bg-sky-100 transition-colors cursor-pointer">
-                          <div className="w-8 h-8 rounded-lg bg-[#0284C7] text-white flex items-center justify-center shadow-xs">
+                        <div className="flex flex-col items-center gap-1 p-1.5 rounded-xl bg-fuchsia-950/30 hover:bg-fuchsia-900/20 transition-colors cursor-pointer">
+                          <div className="w-8 h-8 rounded-lg bg-fuchsia-600 text-white flex items-center justify-center shadow-xs">
                             <FileText className="w-4 h-4" />
                           </div>
                           <span className="text-[10px] font-bold text-slate-800 leading-tight">ভর্তি ফরম</span>
@@ -438,8 +446,8 @@ export const HomeView: React.FC<HomeViewProps> = ({
                           alt="Campus visual"
                           className="w-full h-full object-cover"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#0B132B]/90 via-[#0B132B]/40 to-transparent flex flex-col justify-end p-3 text-white">
-                          <span className="text-[#38BDF8] text-[9px] font-bold uppercase tracking-wider mb-0.5">
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#0e0520]/90 via-[#0e0520]/40 to-transparent flex flex-col justify-end p-3 text-white">
+                          <span className="text-violet-300 text-[9px] font-bold uppercase tracking-wider mb-0.5">
                             {currentInst.tagline}
                           </span>
                           <h5 className="text-xs font-bold leading-snug line-clamp-2">
@@ -466,7 +474,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                         <div className="min-w-0">
                           <div className="flex items-center justify-between">
                             <h6 className="text-[11px] font-bold text-[#0B1C30] truncate">{currentInst.principal}</h6>
-                            <span className="text-[9px] text-[#0284C7] font-semibold flex-shrink-0">বার্তা</span>
+                            <span className="text-[9px] text-fuchsia-400 font-semibold flex-shrink-0">বার্তা</span>
                           </div>
                           <p className="text-[10px] text-slate-500 line-clamp-1">
                             {currentInst.principalMsg}
@@ -477,10 +485,10 @@ export const HomeView: React.FC<HomeViewProps> = ({
                       {/* Academic Download Bar */}
                       <div className="p-2 bg-white rounded-xl border border-slate-200 flex items-center justify-between shadow-2xs">
                         <div className="flex items-center gap-1.5 text-[11px] font-semibold text-slate-700 truncate">
-                          <Download className="w-3.5 h-3.5 text-[#0284C7] flex-shrink-0" />
+                          <Download className="w-3.5 h-3.5 text-fuchsia-400 flex-shrink-0" />
                           <span className="truncate">একাডেমিক ক্যালেন্ডার ও বুক লিস্ট.pdf</span>
                         </div>
-                        <span className="text-[10px] font-bold text-[#0284C7] px-2 py-0.5 rounded bg-sky-50 flex-shrink-0">
+                        <span className="text-[10px] font-bold text-fuchsia-400 px-2 py-0.5 rounded bg-fuchsia-950/30 flex-shrink-0">
                           ডাউনলোড
                         </span>
                       </div>
@@ -488,7 +496,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
                     {/* Native App Bottom Tab Bar */}
                     <div className="bg-white border-t border-slate-200 px-4 py-2 flex items-center justify-around text-slate-500 text-[9px] font-bold">
-                      <div className="flex flex-col items-center gap-0.5 text-[#0284C7]">
+                      <div className="flex flex-col items-center gap-0.5 text-fuchsia-400">
                         <School className="w-4 h-4" />
                         <span>হোম</span>
                       </div>
@@ -516,7 +524,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
               /* VIEW MODE 2: BROWSER DESKTOP PORTAL VIEW */
               <div className="rounded-2xl lg:rounded-3xl bg-white border border-slate-300/85 shadow-2xl shadow-slate-900/10 overflow-hidden text-left transition-all duration-300">
                 {/* Browser OS Chrome Bar */}
-                <div className="h-11 bg-[#0B132B] px-4 sm:px-6 flex items-center justify-between border-b border-slate-800">
+                <div className="h-11 bg-[#0e0520] px-4 sm:px-6 flex items-center justify-between border-b border-slate-800">
                   <div className="flex items-center gap-3">
                     <div className="flex items-center gap-1.5">
                       <span className="w-3 h-3 rounded-full bg-rose-500 inline-block shadow-2xs" />
@@ -545,7 +553,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                   {/* School Header */}
                   <div className="col-span-12 bg-white rounded-2xl p-4 lg:p-5 flex flex-wrap items-center justify-between gap-4 border border-slate-200/90 shadow-2xs">
                     <div className="flex items-center gap-3.5 sm:gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#0B132B] to-[#1e3a5f] text-[#38BDF8] flex items-center justify-center font-black text-base shadow-sm border border-slate-700/40">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#0e0520] to-[#2a1545] text-violet-300 flex items-center justify-center font-black text-base shadow-sm border border-slate-700/40">
                         {currentInst.shortName}
                       </div>
                       <div>
@@ -553,7 +561,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                           <h4 className="text-base sm:text-lg font-black text-[#0B1C30]">
                             {currentInst.name}
                           </h4>
-                          <span className="hidden md:inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-sky-50 text-[#0284C7] border border-sky-200">
+                          <span className="hidden md:inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-fuchsia-950/30 text-fuchsia-400 border border-fuchsia-500/20">
                             {currentInst.board}
                           </span>
                         </div>
@@ -564,7 +572,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                     </div>
                     
                     <div className="flex items-center gap-2.5">
-                      <span className="px-3 py-1.5 rounded-xl bg-sky-50 text-[#0284C7] text-xs font-bold border border-sky-200 shadow-2xs">
+                      <span className="px-3 py-1.5 rounded-xl bg-fuchsia-950/30 text-fuchsia-400 text-xs font-bold border border-fuchsia-500/20 shadow-2xs">
                         অনলাইন ভর্তি চলছে
                       </span>
                       <span className="px-3 py-1.5 rounded-xl bg-slate-100 text-slate-700 text-xs font-semibold hover:bg-slate-200 cursor-pointer border border-slate-200">
@@ -574,15 +582,15 @@ export const HomeView: React.FC<HomeViewProps> = ({
                   </div>
 
                   {/* News Ticker Bar */}
-                  <div className="col-span-12 bg-sky-50/90 border border-sky-200/80 rounded-xl px-4 py-2.5 flex items-center gap-2.5 text-xs">
-                    <span className="px-2.5 py-0.5 rounded bg-[#0B132B] text-white font-bold text-[10px] flex-shrink-0 flex items-center gap-1 shadow-2xs">
-                      <Bell className="w-3 h-3 text-[#38BDF8]" />
+                  <div className="col-span-12 bg-fuchsia-950/30/90 border border-fuchsia-500/20/80 rounded-xl px-4 py-2.5 flex items-center gap-2.5 text-xs">
+                    <span className="px-2.5 py-0.5 rounded bg-[#0e0520] text-white font-bold text-[10px] flex-shrink-0 flex items-center gap-1 shadow-2xs">
+                      <Bell className="w-3 h-3 text-violet-300" />
                       নোটিশ:
                     </span>
                     <p className="text-slate-800 font-medium truncate flex-1">
                       {currentInst.notice}
                     </p>
-                    <span className="text-[11px] font-bold text-[#0284C7] hidden md:inline-flex items-center gap-0.5 cursor-pointer hover:underline">
+                    <span className="text-[11px] font-bold text-fuchsia-400 hidden md:inline-flex items-center gap-0.5 cursor-pointer hover:underline">
                       সকল নোটিশ <ArrowRight className="w-3 h-3" />
                     </span>
                   </div>
@@ -596,8 +604,8 @@ export const HomeView: React.FC<HomeViewProps> = ({
                         alt="Campus visual"
                         className="w-full h-full object-cover"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0B132B]/95 via-[#0B132B]/40 to-transparent flex flex-col justify-end p-5 sm:p-6 text-white">
-                        <span className="text-[#38BDF8] text-[11px] font-extrabold uppercase tracking-wider mb-1">
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0e0520]/95 via-[#0e0520]/40 to-transparent flex flex-col justify-end p-5 sm:p-6 text-white">
+                        <span className="text-violet-300 text-[11px] font-extrabold uppercase tracking-wider mb-1">
                           {currentInst.tagline}
                         </span>
                         <h3 className="text-xl sm:text-2xl font-bold font-heading leading-snug">
@@ -608,8 +616,8 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
                     {/* 4 Interactive Feature Tiles */}
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-                      <div className="p-3 bg-white rounded-xl border border-slate-200 text-center shadow-2xs hover:border-sky-300 transition-colors cursor-pointer group">
-                        <div className="w-8 h-8 rounded-lg bg-sky-50 text-[#0284C7] flex items-center justify-center mx-auto mb-1.5 group-hover:bg-[#0284C7] group-hover:text-white transition-colors">
+                      <div className="p-3 bg-white rounded-xl border border-slate-200 text-center shadow-2xs hover:border-fuchsia-500/30 transition-colors cursor-pointer group">
+                        <div className="w-8 h-8 rounded-lg bg-fuchsia-950/30 text-fuchsia-400 flex items-center justify-center mx-auto mb-1.5 group-hover:bg-fuchsia-600 group-hover:text-white transition-colors">
                           <FileText className="w-4 h-4" />
                         </div>
                         <span className="text-xs font-bold text-slate-800">অনলাইন ভর্তি</span>
@@ -640,7 +648,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                     {/* 3 Quick Stat Cards */}
                     <div className="grid grid-cols-3 gap-3">
                       <div className="p-3.5 bg-white rounded-xl border border-slate-200 text-center shadow-2xs">
-                        <span className="text-lg sm:text-xl font-bold font-heading text-[#0284C7]">{currentInst.passRate}</span>
+                        <span className="text-lg sm:text-xl font-bold font-heading text-fuchsia-400">{currentInst.passRate}</span>
                         <p className="text-[11px] text-slate-500 mt-0.5">পাসের হার</p>
                       </div>
                       <div className="p-3.5 bg-white rounded-xl border border-slate-200 text-center shadow-2xs">
@@ -662,7 +670,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                         <img
                           src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
                           alt="Principal"
-                          className="w-11 h-11 rounded-full object-cover border-2 border-sky-100 shadow-2xs"
+                          className="w-11 h-11 rounded-full object-cover border-2 border-fuchsia-500/10 shadow-2xs"
                         />
                         <div>
                           <h5 className="text-xs sm:text-sm font-bold text-[#0B1C30]">{currentInst.principalRole}</h5>
@@ -677,25 +685,25 @@ export const HomeView: React.FC<HomeViewProps> = ({
                     {/* Academic File Downloads */}
                     <div className="bg-white p-4 lg:p-5 rounded-2xl border border-slate-200 shadow-2xs flex flex-col gap-2.5">
                       <span className="text-xs font-bold text-[#0B1C30] flex items-center gap-1.5">
-                        <Download className="w-3.5 h-3.5 text-[#0284C7]" />
+                        <Download className="w-3.5 h-3.5 text-fuchsia-400" />
                         একাডেমিক ফাইল ডাউনলোড
                       </span>
                       <div className="flex flex-col gap-2">
                         <div className="p-2.5 bg-slate-50 rounded-xl flex items-center justify-between text-xs border border-slate-200/80">
                           <span className="text-slate-700 truncate font-medium">ক্লাস রুটিন ২০২৫.pdf</span>
-                          <span className="text-[11px] font-bold text-[#0284C7] bg-sky-50 px-2 py-0.5 rounded cursor-pointer hover:bg-sky-100">ডাউনলোড</span>
+                          <span className="text-[11px] font-bold text-fuchsia-400 bg-fuchsia-950/30 px-2 py-0.5 rounded cursor-pointer hover:bg-fuchsia-900/20">ডাউনলোড</span>
                         </div>
                         <div className="p-2.5 bg-slate-50 rounded-xl flex items-center justify-between text-xs border border-slate-200/80">
                           <span className="text-slate-700 truncate font-medium">সিলেবাস ও বুক লিস্ট.pdf</span>
-                          <span className="text-[11px] font-bold text-[#0284C7] bg-sky-50 px-2 py-0.5 rounded cursor-pointer hover:bg-sky-100">ডাউনলোড</span>
+                          <span className="text-[11px] font-bold text-fuchsia-400 bg-fuchsia-950/30 px-2 py-0.5 rounded cursor-pointer hover:bg-fuchsia-900/20">ডাউনলোড</span>
                         </div>
                       </div>
                     </div>
 
                     {/* Quick Helpline Box */}
-                    <div className="bg-gradient-to-br from-[#0B132B] to-[#14213d] text-white p-4 rounded-2xl border border-slate-700/50 shadow-xs flex items-center justify-between">
+                    <div className="bg-gradient-to-br from-[#0e0520] to-[#1a0d35] text-white p-4 rounded-2xl border border-slate-700/50 shadow-xs flex items-center justify-between">
                       <div>
-                        <p className="text-[10px] uppercase font-bold text-sky-300">ক্যাম্পাস অনলাইন সাপোর্ট</p>
+                        <p className="text-[10px] uppercase font-bold text-violet-300">ক্যাম্পাস অনলাইন সাপোর্ট</p>
                         <p className="text-xs font-bold mt-0.5">+880 1700-000000</p>
                       </div>
                       <span className="px-2.5 py-1 rounded-lg bg-emerald-500 text-white font-bold text-[10px]">
@@ -710,7 +718,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
             {/* Mobile Native App Touch Cards (Under Mockup) */}
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 text-left">
               <div className="p-3 sm:p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl bg-sky-50 text-[#0284C7] flex items-center justify-center flex-shrink-0 font-bold">
+                <div className="w-9 h-9 rounded-xl bg-fuchsia-950/30 text-fuchsia-400 flex items-center justify-center flex-shrink-0 font-bold">
                   ⚡
                 </div>
                 <div>
@@ -749,23 +757,23 @@ export const HomeView: React.FC<HomeViewProps> = ({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center justify-center md:justify-between gap-6 sm:gap-8 text-xs sm:text-sm font-semibold text-slate-700">
             <div className="flex items-center gap-2">
-              <Smartphone className="w-4 h-4 text-[#0284C7]" />
+              <Smartphone className="w-4 h-4 text-fuchsia-400" />
               <span>✓ Mobile First</span>
             </div>
             <div className="flex items-center gap-2">
-              <Zap className="w-4 h-4 text-[#0284C7]" />
+              <Zap className="w-4 h-4 text-fuchsia-400" />
               <span>✓ Fast Loading (99+ Score)</span>
             </div>
             <div className="flex items-center gap-2">
-              <Layers className="w-4 h-4 text-[#0284C7]" />
+              <Layers className="w-4 h-4 text-fuchsia-400" />
               <span>✓ Easy Admin Panel</span>
             </div>
             <div className="flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-[#0284C7]" />
+              <ShieldCheck className="w-4 h-4 text-fuchsia-400" />
               <span>✓ 100% Secure & Backup</span>
             </div>
             <div className="flex items-center gap-2">
-              <Globe className="w-4 h-4 text-[#0284C7]" />
+              <Globe className="w-4 h-4 text-fuchsia-400" />
               <span>✓ Bangla + English Ready</span>
             </div>
           </div>
@@ -776,7 +784,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
       <section className="py-8 sm:py-12 md:py-16 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-10">
-            <p className="text-xs font-bold uppercase tracking-widest text-[#0284C7] mb-2">
+            <p className="text-xs font-bold uppercase tracking-widest text-fuchsia-400 mb-2">
               {language === 'bn' ? 'প্রাতিষ্ঠানিক আস্থা' : 'Institutional Trust'}
             </p>
             <h2 className="text-xl sm:text-2xl font-bold font-heading text-[#0B1C30]">
@@ -789,15 +797,15 @@ export const HomeView: React.FC<HomeViewProps> = ({
           {/* 5 Institution Partner Cards */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 mb-6 sm:mb-10">
             {[
-              { name: 'রেসিডেনসিয়াল মডেল হাই স্কুল', loc: 'ধানমন্ডি, ঢাকা', icon: <School className="w-6 h-6 text-[#0284C7]" /> },
-              { name: 'গ্রীনফিল্ড আইডিয়াল কলেজ', loc: 'উত্তরা, ঢাকা', icon: <Building2 className="w-6 h-6 text-[#0284C7]" /> },
-              { name: 'আল-হিকমাহ ইসলামিক একাডেমি', loc: 'মিরপুর, ঢাকা', icon: <BookOpen className="w-6 h-6 text-[#0284C7]" /> },
-              { name: 'পায়োনিয়ার ক্যাডেট একাডেমি', loc: 'গাজীপুর', icon: <GraduationCap className="w-6 h-6 text-[#0284C7]" /> },
-              { name: 'শাহীন মডেল একাডেমি', loc: 'বনশ্রী, ঢাকা', icon: <School className="w-6 h-6 text-[#0284C7]" /> },
+              { name: 'রেসিডেনসিয়াল মডেল হাই স্কুল', loc: 'ধানমন্ডি, ঢাকা', icon: <School className="w-6 h-6 text-fuchsia-400" /> },
+              { name: 'গ্রীনফিল্ড আইডিয়াল কলেজ', loc: 'উত্তরা, ঢাকা', icon: <Building2 className="w-6 h-6 text-fuchsia-400" /> },
+              { name: 'আল-হিকমাহ ইসলামিক একাডেমি', loc: 'মিরপুর, ঢাকা', icon: <BookOpen className="w-6 h-6 text-fuchsia-400" /> },
+              { name: 'পায়োনিয়ার ক্যাডেট একাডেমি', loc: 'গাজীপুর', icon: <GraduationCap className="w-6 h-6 text-fuchsia-400" /> },
+              { name: 'শাহীন মডেল একাডেমি', loc: 'বনশ্রী, ঢাকা', icon: <School className="w-6 h-6 text-fuchsia-400" /> },
             ].map((inst, i) => (
               <div
                 key={i}
-                className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 flex flex-col items-center justify-center text-center gap-1.5 hover:shadow-sm hover:border-sky-200 transition-all"
+                className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 flex flex-col items-center justify-center text-center gap-1.5 hover:shadow-sm hover:border-fuchsia-500/20 transition-all"
               >
                 <div className="w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center mb-1">
                   {inst.icon}
@@ -809,10 +817,10 @@ export const HomeView: React.FC<HomeViewProps> = ({
           </div>
 
           {/* Impact Stats Banner */}
-          <div className="p-6 sm:p-8 rounded-2xl bg-[#0B132B] text-white shadow-xl">
+          <div className="p-6 sm:p-8 rounded-2xl bg-[#0e0520] text-white shadow-xl">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               <div>
-                <span className="text-2xl sm:text-4xl font-extrabold font-heading text-[#38BDF8]">৫০+</span>
+                <span className="text-2xl sm:text-4xl font-extrabold font-heading text-violet-300">৫০+</span>
                 <p className="text-xs sm:text-sm text-slate-300 mt-1">
                   {language === 'bn' ? 'শিক্ষা প্রতিষ্ঠান পরিচালিত' : 'Institutions Onboarded'}
                 </p>
@@ -824,7 +832,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 </p>
               </div>
               <div>
-                <span className="text-2xl sm:text-4xl font-extrabold font-heading text-[#38BDF8]">৯৯.৯%</span>
+                <span className="text-2xl sm:text-4xl font-extrabold font-heading text-violet-300">৯৯.৯%</span>
                 <p className="text-xs sm:text-sm text-slate-300 mt-1">
                   {language === 'bn' ? 'নিশ্চিত ক্লাউড আপটাইম' : 'Cloud Uptime Guarantee'}
                 </p>
@@ -845,7 +853,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6 sm:mb-10">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-[#0284C7]">
+              <span className="text-xs font-bold uppercase tracking-wider text-fuchsia-400">
                 {language === 'bn' ? 'আমাদের সল্যুশনসমূহ' : 'Our Solutions'}
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold font-heading text-[#0B1C30] mt-1">
@@ -856,7 +864,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
             </div>
             <button
               onClick={() => onNavigate('services')}
-              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#0284C7] hover:underline cursor-pointer"
+              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-fuchsia-400 hover:underline cursor-pointer"
             >
               <span>{language === 'bn' ? 'সকল সার্ভিস বিস্তারিত দেখুন' : 'View All Services'}</span>
               <ArrowRight className="w-4 h-4" />
@@ -867,10 +875,10 @@ export const HomeView: React.FC<HomeViewProps> = ({
             {SERVICES_DATA.map((srv) => (
               <div
                 key={srv.id}
-                className="group p-6 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:shadow-xl hover:border-sky-300 hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between"
+                className="group p-6 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:shadow-xl hover:border-fuchsia-500/30 hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-xl bg-sky-50 text-[#0284C7] flex items-center justify-center mb-4 group-hover:bg-[#0B132B] group-hover:text-[#38BDF8] transition-colors">
+                  <div className="w-12 h-12 rounded-xl bg-fuchsia-950/30 text-fuchsia-400 flex items-center justify-center mb-4 group-hover:bg-[#0e0520] group-hover:text-violet-300 transition-colors">
                     {srv.category === 'school' && <School className="w-6 h-6" />}
                     {srv.category === 'college' && <Building2 className="w-6 h-6" />}
                     {srv.category === 'madrasa' && <BookOpen className="w-6 h-6" />}
@@ -894,7 +902,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
                 <button
                   onClick={() => onNavigate('services')}
-                  className="flex items-center gap-1.5 text-xs font-bold text-[#0284C7] group-hover:gap-2 transition-all cursor-pointer"
+                  className="flex items-center gap-1.5 text-xs font-bold text-fuchsia-400 group-hover:gap-2 transition-all cursor-pointer"
                 >
                   <span>{language === 'bn' ? 'ফিচার বিস্তারিত দেখুন' : 'Explore Features'}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -909,7 +917,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
       <section className="py-8 sm:py-12 md:py-16 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#0284C7]">
+            <span className="text-xs font-bold uppercase tracking-wider text-fuchsia-400">
               {language === 'bn' ? 'ফুল প্যাকেজ ফিচারস' : 'What You Get'}
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold font-heading text-[#0B1C30] mt-1">
@@ -961,7 +969,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
       <section className="py-8 sm:py-12 md:py-16 bg-slate-100/60 border-b border-slate-200" id="admin-demo-preview">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#0284C7]">
+            <span className="text-xs font-bold uppercase tracking-wider text-fuchsia-400">
               {language === 'bn' ? 'সিগনেচার ফিচার' : 'Signature Feature'}
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold font-heading text-[#0B1C30] mt-1">
@@ -988,7 +996,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6 sm:mb-10">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-[#0284C7]">
+              <span className="text-xs font-bold uppercase tracking-wider text-fuchsia-400">
                 {language === 'bn' ? 'বাস্তব প্রজেক্ট' : 'Featured Works'}
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold font-heading text-[#0B1C30] mt-1">
@@ -999,7 +1007,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
             </div>
             <button
               onClick={() => onNavigate('works')}
-              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#0284C7] hover:underline cursor-pointer"
+              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-fuchsia-400 hover:underline cursor-pointer"
             >
               <span>{language === 'bn' ? 'সকল কেস স্টাডি দেখুন' : 'Explore All Works'}</span>
               <ArrowRight className="w-4 h-4" />
@@ -1010,7 +1018,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
             {FEATURED_PROJECTS.slice(0, 3).map((study) => (
               <div
                 key={study.id}
-                className="group rounded-2xl bg-white border border-slate-200 shadow-2xs hover:shadow-xl hover:border-sky-300 transition-all duration-200 overflow-hidden flex flex-col justify-between"
+                className="group rounded-2xl bg-white border border-slate-200 shadow-2xs hover:shadow-xl hover:border-fuchsia-500/30 transition-all duration-200 overflow-hidden flex flex-col justify-between"
               >
                 <div>
                   <div className="relative h-52 overflow-hidden">
@@ -1019,7 +1027,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                       alt={study.titleEn}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                    <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-[#0B132B]/85 backdrop-blur-xs text-[#38BDF8] text-[10px] font-bold">
+                    <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-[#0e0520]/85 backdrop-blur-xs text-violet-300 text-[10px] font-bold">
                       {language === 'bn' ? study.categoryLabelBn : study.categoryLabelEn}
                     </span>
                   </div>
@@ -1041,7 +1049,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 <div className="p-5 pt-0 flex items-center justify-between border-t border-slate-100 mt-3 pt-3">
                   <button
                     onClick={() => onSelectCaseStudy(study)}
-                    className="inline-flex items-center gap-1 text-xs font-bold text-[#0284C7] hover:underline cursor-pointer"
+                    className="inline-flex items-center gap-1 text-xs font-bold text-fuchsia-400 hover:underline cursor-pointer"
                   >
                     <span>{language === 'bn' ? 'কেস স্টাডি পড়ুন' : 'Read Case Study'}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -1063,7 +1071,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
       <section className="py-8 sm:py-12 md:py-16 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#0284C7]">
+            <span className="text-xs font-bold uppercase tracking-wider text-fuchsia-400">
               {language === 'bn' ? 'আমাদের স্বাতন্ত্র্য' : 'Why CampusDev?'}
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold font-heading text-[#0B1C30] mt-1">
@@ -1079,7 +1087,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 key={item.id}
                 className="p-6 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:shadow-md transition-shadow flex flex-col gap-3"
               >
-                <div className="w-10 h-10 rounded-xl bg-[#0B132B] text-[#38BDF8] flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-[#0e0520] text-violet-300 flex items-center justify-center">
                   {item.id === 'built-for-edu' && <GraduationCap className="w-5 h-5" />}
                   {item.id === 'mobile-first' && <Smartphone className="w-5 h-5" />}
                   {item.id === 'easy-to-manage' && <Layers className="w-5 h-5" />}
@@ -1103,7 +1111,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
       <section className="py-8 sm:py-12 md:py-16 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#0284C7]">
+            <span className="text-xs font-bold uppercase tracking-wider text-fuchsia-400">
               {language === 'bn' ? 'সহজ কর্মপ্রক্রিয়া' : 'Our Process'}
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold font-heading text-[#0B1C30] mt-1">
@@ -1122,7 +1130,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
             {WORKFLOW_STEPS.map((wf) => (
               <div key={wf.step} className="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col gap-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-2xl font-extrabold font-heading text-[#0284C7]">
+                  <span className="text-2xl font-extrabold font-heading text-fuchsia-400">
                     {wf.step}
                   </span>
                   <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-white text-slate-600 border border-slate-200">
@@ -1145,7 +1153,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
       <section className="py-8 sm:py-12 md:py-16 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#0284C7]">
+            <span className="text-xs font-bold uppercase tracking-wider text-fuchsia-400">
               {language === 'bn' ? 'স্বচ্ছ প্যাকেজ রেট' : 'Transparent Pricing'}
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold font-heading text-[#0B1C30] mt-1">
@@ -1166,12 +1174,12 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 key={plan.id}
                 className={`p-6 sm:p-8 rounded-2xl flex flex-col justify-between transition-all ${
                   plan.popular
-                    ? 'bg-[#0B132B] text-white shadow-2xl relative border-2 border-[#0284C7] -translate-y-2'
+                    ? 'bg-[#0e0520] text-white shadow-2xl relative border-2 border-fuchsia-500 -translate-y-2'
                     : 'bg-white text-slate-800 border border-slate-200 shadow-sm'
                 }`}
               >
                 {plan.popular && (
-                  <span className="absolute -top-3.5 right-6 px-3 py-1 rounded-full bg-[#0284C7] text-white text-[10px] font-bold uppercase tracking-wider shadow-sm">
+                  <span className="absolute -top-3.5 right-6 px-3 py-1 rounded-full bg-fuchsia-600 text-white text-[10px] font-bold uppercase tracking-wider shadow-sm">
                     {language === 'bn' ? 'সবচেয়ে জনপ্রিয়' : 'Most Popular'}
                   </span>
                 )}
@@ -1185,7 +1193,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                   </p>
 
                   <div className="my-6">
-                    <span className={`text-3xl sm:text-4xl font-extrabold font-heading ${plan.popular ? 'text-[#38BDF8]' : 'text-[#0B1C30]'}`}>
+                    <span className={`text-3xl sm:text-4xl font-extrabold font-heading ${plan.popular ? 'text-violet-300' : 'text-[#0B1C30]'}`}>
                       {language === 'bn' ? plan.priceBn : plan.priceEn}
                     </span>
                     <span className={`text-xs ml-1 ${plan.popular ? 'text-slate-400' : 'text-slate-500'}`}>
@@ -1196,7 +1204,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                   <ul className="flex flex-col gap-2.5 text-xs mb-8">
                     {(language === 'bn' ? plan.featuresBn : plan.featuresEn).map((feat, idx) => (
                       <li key={idx} className="flex items-start gap-2">
-                        <Check className={`w-4 h-4 flex-shrink-0 mt-0.5 ${plan.popular ? 'text-[#38BDF8]' : 'text-[#0284C7]'}`} />
+                        <Check className={`w-4 h-4 flex-shrink-0 mt-0.5 ${plan.popular ? 'text-violet-300' : 'text-fuchsia-400'}`} />
                         <span className={plan.popular ? 'text-slate-200' : 'text-slate-700'}>{feat}</span>
                       </li>
                     ))}
@@ -1211,7 +1219,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                     onClick={onOpenConsultation}
                     className={`w-full py-3 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                       plan.popular
-                        ? 'bg-[#0284C7] hover:bg-sky-500 text-white shadow-md'
+                        ? 'bg-fuchsia-600 hover:bg-fuchsia-950/300 text-white shadow-md'
                         : 'bg-slate-100 hover:bg-slate-200 text-slate-800'
                     }`}
                   >
@@ -1236,9 +1244,9 @@ export const HomeView: React.FC<HomeViewProps> = ({
             </div>
             <button
               onClick={onOpenEstimator}
-              className="px-6 py-2.5 rounded-xl bg-[#0B132B] hover:bg-[#14213d] text-white text-xs font-bold whitespace-nowrap cursor-pointer flex items-center gap-2"
+              className="px-6 py-2.5 rounded-xl bg-[#0e0520] hover:bg-[#14213d] text-white text-xs font-bold whitespace-nowrap cursor-pointer flex items-center gap-2"
             >
-              <Calculator className="w-4 h-4 text-[#38BDF8]" />
+              <Calculator className="w-4 h-4 text-violet-300" />
               <span>{language === 'bn' ? 'কাস্টম এস্টিমেট হিসাব করুন' : 'Custom Estimate Calculator'}</span>
             </button>
           </div>
@@ -1249,7 +1257,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
       <section className="py-8 sm:py-12 md:py-16 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#0284C7]">
+            <span className="text-xs font-bold uppercase tracking-wider text-fuchsia-400">
               {language === 'bn' ? 'ক্লায়েন্ট মতামত' : 'Testimonials'}
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold font-heading text-[#0B1C30] mt-1">
@@ -1301,7 +1309,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
       <section className="py-8 sm:py-12 md:py-16 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-6 sm:mb-10">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#0284C7]">
+            <span className="text-xs font-bold uppercase tracking-wider text-fuchsia-400">
               {language === 'bn' ? 'প্রশ্নোত্তর' : 'Frequently Asked Questions'}
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold font-heading text-[#0B1C30] mt-1">
@@ -1327,7 +1335,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                     className="w-full p-4 sm:p-5 flex items-center justify-between text-left text-xs sm:text-sm font-bold text-[#0B1C30] hover:bg-slate-50 transition-colors cursor-pointer"
                   >
                     <span>{language === 'bn' ? faq.questionBn : faq.questionEn}</span>
-                    <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform ${isOpen ? 'rotate-180 text-[#0284C7]' : ''}`} />
+                    <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform ${isOpen ? 'rotate-180 text-fuchsia-400' : ''}`} />
                   </button>
 
                   {isOpen && (
@@ -1345,14 +1353,14 @@ export const HomeView: React.FC<HomeViewProps> = ({
       {/* 13. FINAL HIGH-CONVERTING CTA & PROJECT ESTIMATOR TEASER */}
       <section className="py-6 sm:py-12 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative rounded-2xl sm:rounded-3xl bg-[#0B132B] text-white p-5 sm:p-8 lg:p-14 shadow-2xl overflow-hidden">
+          <div className="relative rounded-2xl sm:rounded-3xl bg-[#0e0520] text-white p-5 sm:p-8 lg:p-14 shadow-2xl overflow-hidden">
             {/* Ambient Lighting Rings */}
-            <div className="absolute -top-32 -right-32 w-80 h-80 bg-sky-500/20 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute -top-32 -right-32 w-80 h-80 bg-fuchsia-950/300/20 rounded-full blur-[100px] pointer-events-none" />
             <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-cyan-500/20 rounded-full blur-[100px] pointer-events-none" />
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
               <div className="lg:col-span-7 flex flex-col items-start">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/20 text-[#38BDF8] text-[11px] font-bold uppercase tracking-wider mb-4">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-fuchsia-950/300/20 text-violet-300 text-[11px] font-bold uppercase tracking-wider mb-4">
                   🚀 {language === 'bn' ? 'আজই শুরু করুন' : 'Start Today'}
                 </span>
 
@@ -1371,7 +1379,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 <div className="flex flex-col sm:flex-row items-center gap-3.5 w-full sm:w-auto">
                   <button
                     onClick={onOpenConsultation}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#0284C7] hover:bg-sky-500 text-white text-xs sm:text-sm font-bold shadow-md transition-all cursor-pointer"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-fuchsia-600 hover:bg-fuchsia-950/300 text-white text-xs sm:text-sm font-bold shadow-md transition-all cursor-pointer"
                   >
                     <span>{language === 'bn' ? 'Start Your Project (প্রজেক্ট শুরু করুন)' : 'Start Your Project'}</span>
                     <ArrowRight className="w-4 h-4" />
@@ -1395,7 +1403,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                   <h4 className="text-sm font-bold text-[#0B1C30]">
                     {language === 'bn' ? 'দ্রুত বাজেট ও সময় হিসাব' : 'Quick Budget & Delivery Estimator'}
                   </h4>
-                  <Calculator className="w-4 h-4 text-[#0284C7]" />
+                  <Calculator className="w-4 h-4 text-fuchsia-400" />
                 </div>
                 <p className="text-xs text-slate-500 mb-4">
                   {language === 'bn' ? 'প্রতিষ্ঠানের ধরন বেছে নিন ও তাৎক্ষণিক আনুমানিক খরচ দেখুন:' : 'Select institution category to see instantaneous estimates:'}
@@ -1409,7 +1417,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                     <select
                       value={quickEstimatorType}
                       onChange={(e) => setQuickEstimatorType(e.target.value)}
-                      className="w-full h-10 px-3 rounded-lg border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#0284C7] bg-slate-50"
+                      className="w-full h-10 px-3 rounded-lg border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-fuchsia-500 bg-slate-50"
                     >
                       <option value="school">হাই স্কুল / মডেল একাডেমি</option>
                       <option value="college">মহাবিদ্যালয় / কলেজ পোর্টাল</option>
@@ -1422,7 +1430,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                   <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between">
                     <div>
                       <span className="text-[10px] text-slate-400 font-medium">আনুমানিক খরচ:</span>
-                      <p className="text-lg font-extrabold font-heading text-[#0284C7]">
+                      <p className="text-lg font-extrabold font-heading text-fuchsia-400">
                         {estimatorPrices[quickEstimatorType].price}
                       </p>
                     </div>
@@ -1436,7 +1444,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
                   <button
                     onClick={onOpenEstimator}
-                    className="w-full py-2.5 rounded-xl bg-[#0B132B] hover:bg-[#14213d] text-white text-xs font-bold text-center transition-colors cursor-pointer"
+                    className="w-full py-2.5 rounded-xl bg-[#0e0520] hover:bg-[#14213d] text-white text-xs font-bold text-center transition-colors cursor-pointer"
                   >
                     {language === 'bn' ? 'এই খরচে প্রজেক্ট শুরু করুন' : 'Lock in this Estimate'}
                   </button>

@@ -13,7 +13,7 @@ export const CampusDevIcon: React.FC<{ className?: string; size?: number }> = ({
 }) => {
   return (
     <div 
-      className={`relative inline-flex items-center justify-center rounded-xl bg-[#0B132B] shadow-md shadow-sky-950/20 flex-shrink-0 ${className}`}
+      className={`relative inline-flex items-center justify-center rounded-xl bg-[#0e0520] shadow-md shadow-fuchsia-950/20 flex-shrink-0 ${className}`}
       style={{ width: size, height: size }}
     >
       <svg
@@ -28,14 +28,14 @@ export const CampusDevIcon: React.FC<{ className?: string; size?: number }> = ({
           fill="url(#capGrad)" 
         />
         {/* Tassel cord & button */}
-        <circle cx="50" cy="32" r="3" fill="#38BDF8" />
+        <circle cx="50" cy="32" r="3" fill="#c4b5fd" />
         <path 
           d="M50,32 C68,34 76,42 78,54" 
-          stroke="#38BDF8" 
+          stroke="#c4b5fd" 
           strokeWidth="3" 
           strokeLinecap="round" 
         />
-        <circle cx="78" cy="56" r="3.5" fill="#38BDF8" />
+        <circle cx="78" cy="56" r="3.5" fill="#c4b5fd" />
 
         {/* Code symbol inside cap < > */}
         <path 
@@ -56,7 +56,7 @@ export const CampusDevIcon: React.FC<{ className?: string; size?: number }> = ({
         {/* Lower U-arc / smile arch representing student collar / foundation */}
         <path 
           d="M26,45 C26,72 74,72 74,45" 
-          stroke="#0284C7" 
+          stroke="#e879f9" 
           strokeWidth="7" 
           strokeLinecap="round" 
         />
@@ -64,9 +64,9 @@ export const CampusDevIcon: React.FC<{ className?: string; size?: number }> = ({
         {/* Gradients */}
         <defs>
           <linearGradient id="capGrad" x1="12" y1="32" x2="88" y2="32" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#0284C7" />
-            <stop offset="50%" stopColor="#0EA5E9" />
-            <stop offset="100%" stopColor="#38BDF8" />
+            <stop offset="0%" stopColor="#c026d3" />
+            <stop offset="50%" stopColor="#d946ef" />
+            <stop offset="100%" stopColor="#e879f9" />
           </linearGradient>
         </defs>
       </svg>
@@ -122,7 +122,7 @@ export const Logo: React.FC<LogoProps> = ({
         <div className="flex flex-col min-w-0 justify-center">
           <div className={`font-black font-heading leading-none ${textSizes[size]} truncate tracking-tight`}>
             <span className={theme === 'dark' ? 'text-white' : 'text-[#0B1C30]'}>Campus</span>
-            <span className="text-[#0284C7]">Dev</span>
+            <span className="text-fuchsia-400">Dev</span>
           </div>
           <span 
             className={`font-semibold uppercase ${subTextSizes[size]} ${

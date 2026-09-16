@@ -118,7 +118,7 @@ export const DemosView: React.FC<DemosViewProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-100 text-[#0284C7] text-xs font-bold uppercase tracking-wider mb-3">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-fuchsia-950/30 text-fuchsia-400 text-xs font-bold uppercase tracking-wider mb-3">
             <Laptop className="w-3.5 h-3.5" />
             <span>{language === 'bn' ? 'সরাসরি ডেমো এক্সপ্লোর করুন' : 'Interactive Demos'}</span>
           </span>
@@ -150,7 +150,7 @@ export const DemosView: React.FC<DemosViewProps> = ({
               }}
               className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
                 activeDemo === tab.id
-                  ? 'bg-[#0B132B] text-white shadow-md'
+                  ? 'bg-[#0e0520] text-white shadow-md'
                   : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
               }`}
             >
@@ -165,7 +165,7 @@ export const DemosView: React.FC<DemosViewProps> = ({
             <button
               onClick={() => setShowAdminTab(false)}
               className={`px-4 py-2 rounded-xl text-xs font-bold transition-colors cursor-pointer flex items-center gap-1.5 ${
-                !showAdminTab ? 'bg-[#0284C7] text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                !showAdminTab ? 'bg-fuchsia-600 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
               }`}
             >
               <Laptop className="w-4 h-4" />
@@ -174,7 +174,7 @@ export const DemosView: React.FC<DemosViewProps> = ({
             <button
               onClick={() => setShowAdminTab(true)}
               className={`px-4 py-2 rounded-xl text-xs font-bold transition-colors cursor-pointer flex items-center gap-1.5 ${
-                showAdminTab ? 'bg-[#0284C7] text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                showAdminTab ? 'bg-fuchsia-600 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
               }`}
             >
               <Layers className="w-4 h-4" />
@@ -213,7 +213,7 @@ export const DemosView: React.FC<DemosViewProps> = ({
             <div className={`transition-all duration-300 ${deviceMode === 'mobile' ? 'lg:col-span-6 lg:col-start-4' : 'lg:col-span-8'}`}>
               <div className="rounded-2xl sm:rounded-3xl bg-white border border-slate-300 shadow-2xl overflow-hidden">
                 {/* Browser URL Bar */}
-                <div className="h-10 bg-[#0B132B] px-4 flex items-center justify-between text-white text-xs">
+                <div className="h-10 bg-[#0e0520] px-4 flex items-center justify-between text-white text-xs">
                   <div className="flex items-center gap-2">
                     <span className="w-3 h-3 rounded-full bg-rose-500 inline-block" />
                     <span className="w-3 h-3 rounded-full bg-amber-500 inline-block" />
@@ -222,7 +222,7 @@ export const DemosView: React.FC<DemosViewProps> = ({
                       {current.url}
                     </span>
                   </div>
-                  <span className="px-2 py-0.5 rounded bg-sky-500/20 text-[#38BDF8] text-[10px] font-bold">
+                  <span className="px-2 py-0.5 rounded bg-fuchsia-500/20 text-violet-300 text-[10px] font-bold">
                     DEMO
                   </span>
                 </div>
@@ -232,7 +232,7 @@ export const DemosView: React.FC<DemosViewProps> = ({
                   {/* Institutional Header Banner */}
                   <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-xl bg-[#0B132B] text-white flex items-center justify-center font-bold text-sm">
+                      <div className="w-10 h-10 rounded-xl bg-[#0e0520] text-white flex items-center justify-center font-bold text-sm">
                         CD
                       </div>
                       <div>
@@ -250,8 +250,8 @@ export const DemosView: React.FC<DemosViewProps> = ({
                   </div>
 
                   {/* Breaking News Ticker */}
-                  <div className="p-2.5 rounded-lg bg-sky-50 border border-sky-200/80 text-xs flex items-center gap-2 text-slate-800 font-medium">
-                    <span className="px-2 py-0.5 rounded bg-[#0B132B] text-white text-[10px] font-bold">বিজ্ঞপ্তি</span>
+                  <div className="p-2.5 rounded-lg bg-fuchsia-950/20 border border-fuchsia-500/20 text-xs flex items-center gap-2 text-slate-800 font-medium">
+                    <span className="px-2 py-0.5 rounded bg-[#0e0520] text-white text-[10px] font-bold">বিজ্ঞপ্তি</span>
                     <span className="truncate">{current.noticeTicker}</span>
                   </div>
 
@@ -262,8 +262,8 @@ export const DemosView: React.FC<DemosViewProps> = ({
                       alt="Demo Showcase"
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0B132B]/90 via-[#0B132B]/30 to-transparent flex flex-col justify-end p-5 text-white">
-                      <span className="text-[#38BDF8] text-[10px] font-bold uppercase tracking-wider mb-1">
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0e0520]/90 via-[#0e0520]/30 to-transparent flex flex-col justify-end p-5 text-white">
+                      <span className="text-violet-300 text-[10px] font-bold uppercase tracking-wider mb-1">
                         আধুনিক শিক্ষাঙ্গন
                       </span>
                       <h3 className="text-base sm:text-xl font-bold font-heading">
@@ -275,13 +275,13 @@ export const DemosView: React.FC<DemosViewProps> = ({
                   {/* 4 Interactive Service Action Tiles */}
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
                     {[
-                      { icon: <FileText className="w-4 h-4 text-[#0284C7]" />, title: 'ভর্তি ফরম', subtitle: 'অনলাইনে আবেদন' },
-                      { icon: <Search className="w-4 h-4 text-[#0284C7]" />, title: 'রেজাল্ট আর্কাইভ', subtitle: 'রোল সার্চ' },
-                      { icon: <BookOpen className="w-4 h-4 text-[#0284C7]" />, title: 'সিলেবাস ও রুটিন', subtitle: 'পিডিএফ ডাউনলোড' },
-                      { icon: <ShieldCheck className="w-4 h-4 text-[#0284C7]" />, title: 'অনলাইন ফি', subtitle: 'বিকাশ ও নগদ' },
+                      { icon: <FileText className="w-4 h-4 text-fuchsia-400" />, title: 'ভর্তি ফরম', subtitle: 'অনলাইনে আবেদন' },
+                      { icon: <Search className="w-4 h-4 text-fuchsia-400" />, title: 'রেজাল্ট আর্কাইভ', subtitle: 'রোল সার্চ' },
+                      { icon: <BookOpen className="w-4 h-4 text-fuchsia-400" />, title: 'সিলেবাস ও রুটিন', subtitle: 'পিডিএফ ডাউনলোড' },
+                      { icon: <ShieldCheck className="w-4 h-4 text-fuchsia-400" />, title: 'অনলাইন ফি', subtitle: 'বিকাশ ও নগদ' },
                     ].map((tile, i) => (
                       <div key={i} className="p-3 bg-white rounded-xl border border-slate-200 shadow-2xs text-center flex flex-col items-center">
-                        <div className="w-8 h-8 rounded-lg bg-sky-50 flex items-center justify-center mb-1.5">
+                        <div className="w-8 h-8 rounded-lg bg-fuchsia-950/20 flex items-center justify-center mb-1.5">
                           {tile.icon}
                         </div>
                         <p className="text-xs font-bold text-[#0B1C30]">{tile.title}</p>
@@ -296,7 +296,7 @@ export const DemosView: React.FC<DemosViewProps> = ({
             {/* Sidebar Specifications Column */}
             <div className={`lg:col-span-4 flex flex-col gap-6 ${deviceMode === 'mobile' ? 'hidden lg:flex' : ''}`}>
               <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs flex flex-col gap-4">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#0284C7]">
+                <span className="text-xs font-bold uppercase tracking-wider text-fuchsia-400">
                   {language === 'bn' ? current.categoryBn : current.categoryEn}
                 </span>
 
@@ -340,13 +340,13 @@ export const DemosView: React.FC<DemosViewProps> = ({
                 <div className="pt-4 flex flex-col gap-2">
                   <button
                     onClick={onOpenConsultation}
-                    className="w-full py-3 rounded-xl bg-[#0B132B] hover:bg-[#14213d] text-white text-xs font-bold transition-colors cursor-pointer"
+                    className="w-full py-3 rounded-xl bg-[#0e0520] hover:bg-[#14213d] text-white text-xs font-bold transition-colors cursor-pointer"
                   >
                     {language === 'bn' ? 'এই ডেমোর মতো ওয়েবসাইট তৈরি করুন' : 'Deploy a Similar Platform'}
                   </button>
                   <button
                     onClick={() => setShowAdminTab(true)}
-                    className="w-full py-2.5 rounded-xl bg-sky-50 text-[#0284C7] hover:bg-sky-100 text-xs font-bold transition-colors cursor-pointer"
+                    className="w-full py-2.5 rounded-xl bg-fuchsia-950/20 text-fuchsia-400 hover:bg-fuchsia-900/20 text-xs font-bold transition-colors cursor-pointer"
                   >
                     {language === 'bn' ? 'অ্যাডমিন প্যানেল টেস্ট করুন' : 'Test Drive Admin System'}
                   </button>
@@ -357,13 +357,13 @@ export const DemosView: React.FC<DemosViewProps> = ({
         ) : (
           /* Interactive Admin Demo Simulation */
           <div>
-            <div className="mb-6 p-4 rounded-xl bg-sky-50 border border-sky-200/80 flex items-center justify-between">
+            <div className="mb-6 p-4 rounded-xl bg-fuchsia-950/20 border border-fuchsia-500/20 flex items-center justify-between">
               <p className="text-xs text-slate-700">
                 💡 <b>লাইভ অ্যাডমিন সিমুলেশন:</b> নিচের ফর্মে নতুন নোটিশ যোগ করে দেখুন অথবা রেজাল্ট ও ভর্তি ফরমের আবেদনগুলো ফিল্টার করুন।
               </p>
               <button
                 onClick={() => setShowAdminTab(false)}
-                className="text-xs font-bold text-[#0284C7] hover:underline cursor-pointer"
+                className="text-xs font-bold text-fuchsia-400 hover:underline cursor-pointer"
               >
                 ← ওয়েবসাইট ভিউতে ফিরুন
               </button>

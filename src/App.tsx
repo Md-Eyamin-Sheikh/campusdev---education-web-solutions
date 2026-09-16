@@ -83,7 +83,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#0d0518] text-white flex flex-col font-sans selection:bg-[#007aff]/35 selection:text-white">
+    <div className="min-h-screen bg-[#0a0312] text-white flex flex-col font-sans selection:bg-fuchsia-500/35 selection:text-white">
       {/* Top Navigation */}
       <Navbar
         currentSection={currentSection}

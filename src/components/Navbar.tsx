@@ -116,7 +116,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       descEn: 'Test live notices, admissions, and student results simulation',
       badge: 'Live', 
       badgeColor: 'bg-emerald-100 text-emerald-800 border-emerald-200',
-      icon: <Laptop className="w-4 h-4 text-[#0284C7]" />
+      icon: <Laptop className="w-4 h-4 text-fuchsia-400" />
     },
     { 
       id: 'process', 
@@ -124,7 +124,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       labelEn: 'Development Process',
       descBn: 'রিকোয়ারমেন্ট থেকে লাইভ লঞ্চ পর্যন্ত ৬টি স্বচ্ছ ধাপ',
       descEn: 'From requirements to live campus rollout in 6 clear steps',
-      icon: <Layers className="w-4 h-4 text-sky-600" />
+      icon: <Layers className="w-4 h-4 text-fuchsia-500" />
     },
     { 
       id: 'about', 
@@ -187,7 +187,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       >
         {/* Top Institutional Micro-Bar (Collapsible on scroll) */}
         <div 
-          className={`w-full bg-[#0B132B] text-slate-300 text-[10px] sm:text-[11px] font-medium transition-all duration-300 overflow-hidden ${
+          className={`w-full bg-[#0e0520] text-slate-300 text-[10px] sm:text-[11px] font-medium transition-all duration-300 overflow-hidden ${
             isScrolled ? 'max-h-0 py-0 border-b-0 opacity-0' : 'max-h-12 py-1 sm:py-1.5 border-b border-slate-800 opacity-100'
           }`}
         >
@@ -210,7 +210,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 href="tel:+8801700000000" 
                 className="hidden sm:inline-flex items-center gap-1.5 hover:text-white transition-colors"
               >
-                <Phone className="w-3 h-3 text-[#38BDF8]" />
+                <Phone className="w-3 h-3 text-violet-300" />
                 <span className="font-mono font-semibold">+880 1700-000000</span>
               </a>
               <span className="hidden sm:inline text-slate-600">|</span>
@@ -223,7 +223,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         </div>
 
         {/* Top subtle institutional status hair-line */}
-        <div className="w-full h-[2px] sm:h-[2.5px] bg-gradient-to-r from-[#0284C7] via-[#38BDF8] to-emerald-500" />
+        <div className="w-full h-[2px] sm:h-[2.5px] bg-gradient-to-r from-fuchsia-500 via-violet-300 to-emerald-500" />
 
         {/* Main Navbar Bar (Target selector: div#root > div > header#top-main-navbar > div:nth-of-type(3)) */}
         <div 
@@ -242,7 +242,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               <Logo size="responsive" />
             </button>
 
-            {/* <span className="hidden 2xl:inline-flex items-center gap-1.5 text-[10px] font-bold text-[#0284C7] bg-sky-50/90 border border-sky-200/80 px-2.5 py-1 rounded-full shadow-2xs">
+            {/* <span className="hidden 2xl:inline-flex items-center gap-1.5 text-[10px] font-bold text-fuchsia-400 bg-fuchsia-950/20 border border-fuchsia-500/20 px-2.5 py-1 rounded-full shadow-2xs">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
               <span>EduTech Lab</span>
             </span> */}
@@ -264,13 +264,13 @@ export const Navbar: React.FC<NavbarProps> = ({
                   onClick={() => handleNavClick(link.id)}
                   className={`relative px-3 xl:px-3.5 py-1.5 rounded-xl text-xs xl:text-[13px] font-semibold transition-all duration-200 cursor-pointer flex items-center gap-1.5 whitespace-nowrap ${
                     isActive
-                      ? 'premium-nav-active text-[#0284C7] font-bold shadow-xs border border-slate-200/80'
+                      ? 'premium-nav-active text-fuchsia-400 font-bold shadow-xs border border-slate-200/80'
                       : 'text-slate-600 hover:text-slate-900 hover:bg-white/60'
                   }`}
                 >
                   <span>{language === 'bn' ? link.labelBn : link.labelEn}</span>
                   {link.badge && (
-                    <span className={`px-1.5 py-0.2 text-[9px] font-extrabold rounded-full uppercase tracking-wider ${link.badgeColor || 'bg-sky-100 text-[#0284C7]'}`}>
+                    <span className={`px-1.5 py-0.2 text-[9px] font-extrabold rounded-full uppercase tracking-wider ${link.badgeColor || 'bg-fuchsia-950/30 text-fuchsia-400'}`}>
                       {link.badge}
                     </span>
                   )}
@@ -285,15 +285,15 @@ export const Navbar: React.FC<NavbarProps> = ({
                 onClick={() => setMoreDropdownOpen(!moreDropdownOpen)}
                 className={`px-2.5 xl:px-3 py-1.5 rounded-xl text-xs xl:text-[13px] font-semibold transition-all duration-200 cursor-pointer flex items-center gap-1 whitespace-nowrap ${
                   isSecondaryActive || moreDropdownOpen
-                    ? 'premium-nav-active text-[#0284C7] font-bold shadow-xs border border-slate-200/80'
+                    ? 'premium-nav-active text-fuchsia-400 font-bold shadow-xs border border-slate-200/80'
                     : 'text-slate-600 hover:text-slate-900 hover:bg-white/60'
                 }`}
                 aria-expanded={moreDropdownOpen}
               >
                 <span>{language === 'bn' ? 'আরো মেনু' : 'More'}</span>
-                <ChevronDown className={`w-3.5 h-3.5 text-slate-500 transition-transform duration-200 ${moreDropdownOpen ? 'rotate-180 text-[#0284C7]' : ''}`} />
+                <ChevronDown className={`w-3.5 h-3.5 text-slate-500 transition-transform duration-200 ${moreDropdownOpen ? 'rotate-180 text-fuchsia-400' : ''}`} />
                 {isSecondaryActive && (
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#0284C7]" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400" />
                 )}
               </button>
 
@@ -319,7 +319,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                           onClick={() => handleNavClick(item.id)}
                           className={`w-full p-2.5 rounded-xl text-left transition-all flex items-start gap-3 cursor-pointer group ${
                             isActive 
-                              ? 'bg-sky-50 text-[#0284C7] font-semibold border border-sky-100' 
+                              ? 'bg-fuchsia-950/20 text-fuchsia-400 font-semibold border border-fuchsia-900/20' 
                               : 'hover:bg-slate-50 text-slate-700'
                           }`}
                         >
@@ -330,11 +330,11 @@ export const Navbar: React.FC<NavbarProps> = ({
                           </div>
                           <div className="flex-1 min-w-0">
                             <div className="flex items-center justify-between gap-1">
-                              <span className="text-xs font-bold text-slate-900 group-hover:text-[#0284C7]">
+                              <span className="text-xs font-bold text-slate-900 group-hover:text-fuchsia-400">
                                 {language === 'bn' ? item.labelBn : item.labelEn}
                               </span>
                               {item.badge && (
-                                <span className={`text-[9px] font-extrabold px-1.5 py-0.2 rounded-full border ${item.badgeColor || 'bg-sky-50 text-[#0284C7] border-sky-200'}`}>
+                                <span className={`text-[9px] font-extrabold px-1.5 py-0.2 rounded-full border ${item.badgeColor || 'bg-fuchsia-950/20 text-fuchsia-400 border-fuchsia-500/20'}`}>
                                   {item.badge}
                                 </span>
                               )}
@@ -359,12 +359,12 @@ export const Navbar: React.FC<NavbarProps> = ({
             {/* <button
               id="navbar-free-audit-btn"
               onClick={onOpenAudit}
-              className="hidden xl:inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold text-slate-700 bg-slate-100/90 hover:bg-sky-50 hover:text-[#0284C7] hover:border-sky-200 border border-slate-200/90 transition-all cursor-pointer shadow-2xs active:scale-95 whitespace-nowrap"
+              className="hidden xl:inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold text-slate-700 bg-slate-100/90 hover:bg-fuchsia-950/20 hover:text-fuchsia-400 hover:border-fuchsia-500/20 border border-slate-200/90 transition-all cursor-pointer shadow-2xs active:scale-95 whitespace-nowrap"
               title={language === 'bn' ? 'বর্তমান স্কুল ওয়েবসাইট স্পিড ও এসইও অডিট করুন' : 'Test your current school website speed and mobile readiness'}
             >
               <div className="relative">
-                <Zap className="w-3.5 h-3.5 text-[#0284C7]" />
-                <span className="absolute -top-0.5 -right-0.5 w-1 h-1 bg-[#0284C7] rounded-full animate-ping" />
+                <Zap className="w-3.5 h-3.5 text-fuchsia-400" />
+                <span className="absolute -top-0.5 -right-0.5 w-1 h-1 bg-fuchsia-400 rounded-full animate-ping" />
               </div>
               <span>{language === 'bn' ? 'ফ্রি স্পিড অডিট' : 'Free Speed Audit'}</span>
             </button> */}
@@ -379,11 +379,11 @@ export const Navbar: React.FC<NavbarProps> = ({
             >
               <Globe className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-slate-500 flex-shrink-0" />
               <div className="flex items-center gap-0.5 text-[10px] sm:text-xs font-bold">
-                <span className={`px-1 py-0.2 rounded ${language === 'bn' ? 'bg-white text-[#0284C7] font-extrabold shadow-2xs' : 'text-slate-500'}`}>
+                <span className={`px-1 py-0.2 rounded ${language === 'bn' ? 'bg-white text-fuchsia-400 font-extrabold shadow-2xs' : 'text-slate-500'}`}>
                   বাং
                 </span>
                 <span className="text-slate-300 font-light">/</span>
-                <span className={`px-1 py-0.2 rounded ${language === 'en' ? 'bg-white text-[#0284C7] font-extrabold shadow-2xs' : 'text-slate-500'}`}>
+                <span className={`px-1 py-0.2 rounded ${language === 'en' ? 'bg-white text-fuchsia-400 font-extrabold shadow-2xs' : 'text-slate-500'}`}>
                   EN
                 </span>
               </div>
@@ -410,12 +410,12 @@ export const Navbar: React.FC<NavbarProps> = ({
             {/* <button
               id="navbar-consultation-cta-btn"
               onClick={onOpenConsultation}
-              className="premium-primary inline-flex items-center gap-1 sm:gap-1.5 px-2 xs:px-2.5 sm:px-4 lg:px-4.5 xl:px-5 py-1.5 sm:py-2.5 rounded-lg sm:rounded-xl text-[11px] xs:text-xs sm:text-sm font-bold text-white hover:shadow-lg hover:shadow-sky-950/25 active:scale-95 shadow-xs sm:shadow-md transition-all cursor-pointer whitespace-nowrap border group flex-shrink-0"
+              className="premium-primary inline-flex items-center gap-1 sm:gap-1.5 px-2 xs:px-2.5 sm:px-4 lg:px-4.5 xl:px-5 py-1.5 sm:py-2.5 rounded-lg sm:rounded-xl text-[11px] xs:text-xs sm:text-sm font-bold text-white hover:shadow-lg hover:shadow-fuchsia-900/25 active:scale-95 shadow-xs sm:shadow-md transition-all cursor-pointer whitespace-nowrap border group flex-shrink-0"
             >
-              <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#38BDF8] group-hover:rotate-12 transition-transform flex-shrink-0" />
+              <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-violet-300 group-hover:rotate-12 transition-transform flex-shrink-0" />
               <span className="hidden sm:inline">{language === 'bn' ? 'ফ্রি কনসালটেশন' : 'Free Consultation'}</span>
               <span className="sm:hidden">{language === 'bn' ? 'পরামর্শ' : 'Consult'}</span>
-              <ArrowRight className="w-3.5 h-3.5 text-sky-300 hidden xl:inline group-hover:translate-x-0.5 transition-transform" />
+              <ArrowRight className="w-3.5 h-3.5 text-violet-300 hidden xl:inline group-hover:translate-x-0.5 transition-transform" />
             </button> */}
 
             {/* Mobile / Tablet Menu Button (Visible < lg 1024px) */}
@@ -446,7 +446,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             {/* Institution Badge in Drawer */}
             <div className="flex items-center justify-between pb-3 border-b border-slate-100">
               <div className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-[#0284C7]" />
+                <ShieldCheck className="w-4 h-4 text-fuchsia-400" />
                 <span className="text-xs font-bold text-slate-700">
                   {language === 'bn' ? 'শিক্ষা প্রতিষ্ঠানের জন্য স্পেশালাইজড প্ল্যাটফর্ম' : 'Specialized Education Web Platform'}
                 </span>
@@ -466,14 +466,14 @@ export const Navbar: React.FC<NavbarProps> = ({
                   onClick={() => handleNavClick(link.id)}
                   className={`w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-left text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
                     currentSection === link.id
-                      ? 'bg-sky-50 text-[#0284C7] font-bold border border-sky-200/80 shadow-2xs'
+                      ? 'bg-fuchsia-950/20 text-fuchsia-400 font-bold border border-fuchsia-500/20 shadow-2xs'
                       : 'text-slate-700 hover:bg-slate-50'
                   }`}
                 >
                   <div className="flex items-center gap-2">
                     <span>{language === 'bn' ? link.labelBn : link.labelEn}</span>
                     {link.badge && (
-                      <span className={`px-1.5 py-0.5 text-[9px] font-extrabold rounded-md ${link.badgeColor || 'bg-sky-100 text-[#0284C7]'}`}>
+                      <span className={`px-1.5 py-0.5 text-[9px] font-extrabold rounded-md ${link.badgeColor || 'bg-fuchsia-950/30 text-fuchsia-400'}`}>
                         {link.badge}
                       </span>
                     )}
@@ -493,10 +493,10 @@ export const Navbar: React.FC<NavbarProps> = ({
                   setMobileMenuOpen(false);
                   onOpenAudit();
                 }}
-                className="w-full flex items-center justify-between p-3 rounded-2xl bg-gradient-to-r from-sky-50/90 to-slate-50 border border-sky-100 text-slate-800 text-xs sm:text-sm font-bold shadow-2xs hover:border-sky-300 transition-all cursor-pointer text-left"
+                className="w-full flex items-center justify-between p-3 rounded-2xl bg-gradient-to-r from-fuchsia-950/20 to-slate-50 border border-fuchsia-900/20 text-slate-800 text-xs sm:text-sm font-bold shadow-2xs hover:border-fuchsia-500/30 transition-all cursor-pointer text-left"
               >
                 <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-xl bg-sky-100 text-[#0284C7] flex items-center justify-center flex-shrink-0">
+                  <div className="w-8 h-8 rounded-xl bg-fuchsia-950/30 text-fuchsia-400 flex items-center justify-center flex-shrink-0">
                     <Zap className="w-4 h-4" />
                   </div>
                   <div>
@@ -508,7 +508,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                     </span>
                   </div>
                 </div>
-                <ArrowRight className="w-4 h-4 text-[#0284C7] flex-shrink-0" />
+                <ArrowRight className="w-4 h-4 text-fuchsia-400 flex-shrink-0" />
               </button>
 
               {/* WhatsApp and Direct Phone Contact Row */}
@@ -529,7 +529,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   href="tel:+8801700000000"
                   className="flex items-center justify-center gap-1.5 p-2.5 rounded-xl bg-slate-100 text-slate-800 border border-slate-200 text-xs font-bold transition-colors"
                 >
-                  <Phone className="w-4 h-4 text-[#0284C7]" />
+                  <Phone className="w-4 h-4 text-fuchsia-400" />
                   <span>{language === 'bn' ? 'কল করুন' : 'Direct Call'}</span>
                 </a>
               </div>
@@ -543,7 +543,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 }}
                 className="premium-primary w-full flex items-center justify-center gap-2 py-3.5 rounded-2xl text-white text-xs sm:text-sm font-bold shadow-md cursor-pointer transition-all active:scale-[0.99]"
               >
-                <Sparkles className="w-4 h-4 text-[#38BDF8]" />
+                <Sparkles className="w-4 h-4 text-violet-300" />
                 <span>{language === 'bn' ? 'ফ্রি প্ল্যানিং ও কনসালটেশন বুক করুন' : 'Book Free Strategy Consultation'}</span>
               </button>
             </div>

@@ -88,7 +88,7 @@ export const ProcessView: React.FC<ProcessViewProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-50 text-[#0284C7] text-xs font-bold uppercase tracking-wider mb-3">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-fuchsia-950/20 text-fuchsia-400 text-xs font-bold uppercase tracking-wider mb-3">
             <Sparkles className="w-3.5 h-3.5" />
             <span>{language === 'bn' ? 'স্বচ্ছ ও সুশৃঙ্খল প্রক্রিয়া' : 'Structured Workflow'}</span>
           </span>
@@ -114,12 +114,12 @@ export const ProcessView: React.FC<ProcessViewProps> = ({
                 onClick={() => setActiveStepIndex(idx)}
                 className={`p-4 rounded-2xl border text-left transition-all cursor-pointer flex flex-col justify-between ${
                   isActive
-                    ? 'premium-process-step-active text-white border-[#0284C7] shadow-lg -translate-y-1'
+                    ? 'premium-process-step-active text-white border-fuchsia-400 shadow-lg -translate-y-1'
                     : 'premium-surface hover:bg-slate-100 text-slate-800 border-slate-200'
                 }`}
               >
                 <div className="flex items-center justify-between mb-2">
-                  <span className={`text-xl font-extrabold font-heading ${isActive ? 'text-[#38BDF8]' : 'text-[#0284C7]'}`}>
+                  <span className={`text-xl font-extrabold font-heading ${isActive ? 'text-violet-300' : 'text-fuchsia-400'}`}>
                     {item.step}
                   </span>
                   <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
@@ -141,10 +141,10 @@ export const ProcessView: React.FC<ProcessViewProps> = ({
           <div className="flex flex-col lg:flex-row gap-8 items-start">
             <div className="lg:w-7/12 flex flex-col gap-4">
               <div className="flex items-center gap-3">
-                <span className="text-3xl sm:text-4xl font-extrabold font-heading text-[#0284C7]">
+                <span className="text-3xl sm:text-4xl font-extrabold font-heading text-fuchsia-400">
                   ধাপ {current.step}
                 </span>
-                <span className="px-3 py-1 rounded-full bg-sky-100 text-[#0284C7] text-xs font-bold">
+                <span className="px-3 py-1 rounded-full bg-fuchsia-950/30 text-fuchsia-400 text-xs font-bold">
                   সময়কাল: {current.duration}
                 </span>
               </div>
@@ -167,7 +167,7 @@ export const ProcessView: React.FC<ProcessViewProps> = ({
                 {activeStepIndex < 5 && (
                   <button
                     onClick={() => setActiveStepIndex(activeStepIndex + 1)}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0284C7] hover:underline cursor-pointer"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-fuchsia-400 hover:underline cursor-pointer"
                   >
                     <span>পরবর্তী ধাপ দেখুন ({stepDetails[activeStepIndex + 1].step})</span>
                     <ArrowRight className="w-4 h-4" />
@@ -179,7 +179,7 @@ export const ProcessView: React.FC<ProcessViewProps> = ({
             {/* Step Handover Roles Card */}
             <div className="lg:w-5/12 w-full flex flex-col gap-4">
               <div className="premium-surface p-5 rounded-2xl border shadow-2xs">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#0284C7] block mb-1">
+                <span className="text-xs font-bold uppercase tracking-wider text-fuchsia-400 block mb-1">
                   🎓 প্রতিষ্ঠানের ভূমিকা:
                 </span>
                 <p className="text-xs text-slate-700 leading-relaxed">

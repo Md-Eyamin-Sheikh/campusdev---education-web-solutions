@@ -42,7 +42,7 @@ export const WorksView: React.FC<WorksViewProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-50 text-[#0284C7] text-xs font-bold uppercase tracking-wider mb-3">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-fuchsia-950/20 text-fuchsia-400 text-xs font-bold uppercase tracking-wider mb-3">
             <Sparkles className="w-3.5 h-3.5" />
             <span>{language === 'bn' ? 'বাস্তব সফল প্রজেক্টসমূহ' : 'Featured Case Studies'}</span>
           </span>
@@ -68,7 +68,7 @@ export const WorksView: React.FC<WorksViewProps> = ({
                 onClick={() => setActiveFilter(btn.id)}
                 className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
                   isActive
-                    ? 'bg-[#0B132B] text-white shadow-md'
+                    ? 'bg-[#0e0520] text-white shadow-md'
                     : 'bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-900'
                 }`}
               >
@@ -83,7 +83,7 @@ export const WorksView: React.FC<WorksViewProps> = ({
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className="group rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-sky-300 transition-all duration-300 overflow-hidden flex flex-col justify-between"
+              className="group rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-fuchsia-500/30 transition-all duration-300 overflow-hidden flex flex-col justify-between"
             >
               <div>
                 {/* Image Frame */}
@@ -93,17 +93,17 @@ export const WorksView: React.FC<WorksViewProps> = ({
                     alt={project.titleEn}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B132B]/85 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0e0520]/85 via-transparent to-transparent" />
                   
                   <div className="absolute top-4 left-4 flex items-center gap-2">
-                    <span className="px-3 py-1 rounded-full bg-[#0B132B]/90 backdrop-blur-md text-[#38BDF8] text-[11px] font-bold">
+                    <span className="px-3 py-1 rounded-full bg-[#0e0520]/90 backdrop-blur-md text-violet-300 text-[11px] font-bold">
                       {language === 'bn' ? project.categoryLabelBn : project.categoryLabelEn}
                     </span>
                   </div>
 
                   <div className="absolute bottom-4 left-4 right-4 text-white">
                     <div className="flex items-center gap-1.5 text-xs text-slate-300 mb-1">
-                      <MapPin className="w-3.5 h-3.5 text-[#38BDF8]" />
+                      <MapPin className="w-3.5 h-3.5 text-violet-300" />
                       <span>{language === 'bn' ? project.locationBn : project.locationEn}</span>
                     </div>
                     <h3 className="text-lg sm:text-xl font-bold font-heading leading-tight">
@@ -140,7 +140,7 @@ export const WorksView: React.FC<WorksViewProps> = ({
               <div className="p-6 pt-0 flex items-center justify-between border-t border-slate-100 mt-2 pt-4">
                 <button
                   onClick={() => onSelectCaseStudy(project)}
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0284C7] hover:underline cursor-pointer"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-fuchsia-400 hover:underline cursor-pointer"
                 >
                   <span>{language === 'bn' ? 'সম্পূর্ণ কেস স্টাডি পড়ুন' : 'View Full Case Study'}</span>
                   <ArrowRight className="w-4 h-4" />
@@ -148,7 +148,7 @@ export const WorksView: React.FC<WorksViewProps> = ({
 
                 <button
                   onClick={() => onSelectCaseStudy(project)}
-                  className="px-4 py-2 rounded-xl bg-slate-100 hover:bg-[#0B132B] hover:text-white text-slate-800 text-xs font-semibold transition-colors cursor-pointer"
+                  className="px-4 py-2 rounded-xl bg-slate-100 hover:bg-[#0e0520] hover:text-white text-slate-800 text-xs font-semibold transition-colors cursor-pointer"
                 >
                   {language === 'bn' ? 'প্রজেক্ট মেট্রিক্স' : 'View Metrics'}
                 </button>
@@ -158,7 +158,7 @@ export const WorksView: React.FC<WorksViewProps> = ({
         </div>
 
         {/* Consultation Callout */}
-        <div className="p-8 rounded-3xl bg-[#0B132B] text-white flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="p-8 rounded-3xl bg-[#0e0520] text-white flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <h3 className="text-lg sm:text-xl font-bold font-heading">
               {language === 'bn' ? 'আপনার প্রতিষ্ঠানের জন্য এমন একটি প্ল্যাটফর্ম তৈরি করতে চান?' : 'Ready to Elevate Your Academic Institution?'}
@@ -171,7 +171,7 @@ export const WorksView: React.FC<WorksViewProps> = ({
           </div>
           <button
             onClick={onOpenConsultation}
-            className="px-6 py-3 rounded-xl bg-[#0284C7] hover:bg-sky-500 text-white text-xs sm:text-sm font-bold whitespace-nowrap shadow-md cursor-pointer transition-colors"
+            className="px-6 py-3 rounded-xl bg-fuchsia-600 hover:bg-fuchsia-500 text-white text-xs sm:text-sm font-bold whitespace-nowrap shadow-md cursor-pointer transition-colors"
           >
             {language === 'bn' ? 'ফ্রি প্ল্যানিং কল বুক করুন' : 'Schedule Free Strategy Call'}
           </button>

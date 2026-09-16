@@ -72,7 +72,7 @@ export const ContactView: React.FC<ContactViewProps> = ({ language }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-100 text-[#0284C7] text-xs font-bold uppercase tracking-wider mb-3">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-fuchsia-950/30 text-fuchsia-400 text-xs font-bold uppercase tracking-wider mb-3">
             <Sparkles className="w-3.5 h-3.5" />
             <span>{language === 'bn' ? 'প্রজেক্ট আলোচনা ও যোগাযোগ' : 'Start Your Project'}</span>
           </span>
@@ -98,7 +98,7 @@ export const ContactView: React.FC<ContactViewProps> = ({ language }) => {
                   <div key={s} className="flex items-center gap-1.5">
                     <span className={`w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs ${
                       step === s 
-                        ? 'bg-[#0B132B] text-white' 
+                        ? 'bg-[#0e0520] text-white' 
                         : step > s 
                           ? 'bg-emerald-100 text-emerald-700' 
                           : 'bg-slate-100 text-slate-400'
@@ -115,7 +115,7 @@ export const ContactView: React.FC<ContactViewProps> = ({ language }) => {
 
               <div className="text-right">
                 <span className="text-[10px] text-slate-400 block font-medium">আনুমানিক বাজেট:</span>
-                <span className="text-base sm:text-lg font-extrabold font-heading text-[#0284C7] font-mono">
+                <span className="text-base sm:text-lg font-extrabold font-heading text-fuchsia-400 font-mono">
                   ৳{calculatedPrice.toLocaleString()}
                 </span>
               </div>
@@ -137,10 +137,10 @@ export const ContactView: React.FC<ContactViewProps> = ({ language }) => {
 
                     <div className="grid grid-cols-2 gap-3">
                       {[
-                        { id: 'school', title: 'স্কুল / হাই স্কুল', desc: 'মডেল স্কুল ও একাডেমি', icon: <School className="w-5 h-5 text-[#0284C7]" /> },
-                        { id: 'college', title: 'কলেজ / মহাবিদ্যালয়', desc: 'ডিগ্রি ও অনার্স কলেজ', icon: <Building2 className="w-5 h-5 text-[#0284C7]" /> },
-                        { id: 'madrasa', title: 'মাদ্রাসা ও ইসলামিক কমপ্লেক্স', desc: 'হিফজ ও কামিল মাদ্রাসা', icon: <BookOpen className="w-5 h-5 text-[#0284C7]" /> },
-                        { id: 'coaching', title: 'কোচিং / অন্যান্য একাডেমি', desc: 'ভর্তি কোচিং ও ইনস্টিটিউট', icon: <Layers className="w-5 h-5 text-[#0284C7]" /> },
+                        { id: 'school', title: 'স্কুল / হাই স্কুল', desc: 'মডেল স্কুল ও একাডেমি', icon: <School className="w-5 h-5 text-fuchsia-400" /> },
+                        { id: 'college', title: 'কলেজ / মহাবিদ্যালয়', desc: 'ডিগ্রি ও অনার্স কলেজ', icon: <Building2 className="w-5 h-5 text-fuchsia-400" /> },
+                        { id: 'madrasa', title: 'মাদ্রাসা ও ইসলামিক কমপ্লেক্স', desc: 'হিফজ ও কামিল মাদ্রাসা', icon: <BookOpen className="w-5 h-5 text-fuchsia-400" /> },
+                        { id: 'coaching', title: 'কোচিং / অন্যান্য একাডেমি', desc: 'ভর্তি কোচিং ও ইনস্টিটিউট', icon: <Layers className="w-5 h-5 text-fuchsia-400" /> },
                       ].map((item) => (
                         <button
                           key={item.id}
@@ -148,7 +148,7 @@ export const ContactView: React.FC<ContactViewProps> = ({ language }) => {
                           onClick={() => setInstitutionType(item.id)}
                           className={`p-4 rounded-xl border-2 text-left transition-all cursor-pointer flex flex-col gap-2 ${
                             institutionType === item.id
-                              ? 'border-[#0284C7] bg-sky-50/50 shadow-xs'
+                              ? 'border-fuchsia-400 bg-fuchsia-950/20 shadow-xs'
                               : 'border-slate-200 hover:border-slate-300'
                           }`}
                         >
@@ -172,7 +172,7 @@ export const ContactView: React.FC<ContactViewProps> = ({ language }) => {
                         placeholder="উদা: আইডিয়াল স্কুল অ্যান্ড কলেজ..."
                         value={institutionName}
                         onChange={(e) => setInstitutionName(e.target.value)}
-                        className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#0284C7]"
+                        className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
                       />
                     </div>
 
@@ -180,7 +180,7 @@ export const ContactView: React.FC<ContactViewProps> = ({ language }) => {
                       <button
                         type="button"
                         onClick={() => setStep(2)}
-                        className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#0B132B] text-white text-xs font-bold hover:bg-[#14213d] cursor-pointer"
+                        className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#0e0520] text-white text-xs font-bold hover:bg-[#14213d] cursor-pointer"
                       >
                         <span>পরবর্তী ধাপ</span>
                         <ArrowRight className="w-4 h-4" />
@@ -213,13 +213,13 @@ export const ContactView: React.FC<ContactViewProps> = ({ language }) => {
                           onClick={() => setWebsiteType(p.id)}
                           className={`p-4 rounded-xl border-2 text-left transition-all cursor-pointer flex flex-col justify-between ${
                             websiteType === p.id
-                              ? 'border-[#0284C7] bg-sky-50/50 shadow-xs'
+                              ? 'border-fuchsia-400 bg-fuchsia-950/20 shadow-xs'
                               : 'border-slate-200 hover:border-slate-300'
                           }`}
                         >
                           <div>
                             <p className="text-xs font-bold text-[#0B1C30]">{p.title}</p>
-                            <p className="text-base font-bold text-[#0284C7] font-mono mt-1">{p.price}</p>
+                            <p className="text-base font-bold text-fuchsia-400 font-mono mt-1">{p.price}</p>
                             <p className="text-[11px] text-slate-500 mt-2">{p.desc}</p>
                           </div>
                           <div className="pt-3 border-t border-slate-100 mt-3 text-[10px] text-slate-400">
@@ -242,7 +242,7 @@ export const ContactView: React.FC<ContactViewProps> = ({ language }) => {
                       <button
                         type="button"
                         onClick={() => setStep(3)}
-                        className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#0B132B] text-white text-xs font-bold hover:bg-[#14213d] cursor-pointer"
+                        className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#0e0520] text-white text-xs font-bold hover:bg-[#14213d] cursor-pointer"
                       >
                         <span>পরবর্তী ধাপ</span>
                         <ArrowRight className="w-4 h-4" />
@@ -283,13 +283,13 @@ export const ContactView: React.FC<ContactViewProps> = ({ language }) => {
                             onClick={() => toggleFeature(feat.id)}
                             className={`p-3 rounded-xl border text-left text-xs font-semibold flex items-center justify-between transition-colors cursor-pointer ${
                               isChecked
-                                ? 'border-[#0284C7] bg-sky-50 text-[#0B1C30]'
+                                ? 'border-fuchsia-400 bg-fuchsia-950/20 text-[#0B1C30]'
                                 : 'border-slate-200 text-slate-600 hover:border-slate-300'
                             }`}
                           >
                             <span>{feat.label}</span>
                             <span className={`w-4 h-4 rounded-full flex items-center justify-center text-[10px] ${
-                              isChecked ? 'bg-[#0284C7] text-white' : 'border border-slate-300'
+                              isChecked ? 'bg-fuchsia-600 text-white' : 'border border-slate-300'
                             }`}>
                               {isChecked && '✓'}
                             </span>
@@ -311,7 +311,7 @@ export const ContactView: React.FC<ContactViewProps> = ({ language }) => {
                       <button
                         type="button"
                         onClick={() => setStep(4)}
-                        className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#0B132B] text-white text-xs font-bold hover:bg-[#14213d] cursor-pointer"
+                        className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#0e0520] text-white text-xs font-bold hover:bg-[#14213d] cursor-pointer"
                       >
                         <span>পরবর্তী ধাপ</span>
                         <ArrowRight className="w-4 h-4" />
@@ -343,7 +343,7 @@ export const ContactView: React.FC<ContactViewProps> = ({ language }) => {
                           placeholder="উদা: ড. মো: রফিকুল ইসলাম (অধ্যক্ষ)"
                           value={name}
                           onChange={(e) => setName(e.target.value)}
-                          className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#0284C7]"
+                          className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
                         />
                       </div>
 
@@ -357,7 +357,7 @@ export const ContactView: React.FC<ContactViewProps> = ({ language }) => {
                           placeholder="017XXXXXXXX"
                           value={phone}
                           onChange={(e) => setPhone(e.target.value)}
-                          className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#0284C7]"
+                          className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
                         />
                       </div>
 
@@ -370,7 +370,7 @@ export const ContactView: React.FC<ContactViewProps> = ({ language }) => {
                           placeholder="01XXXXXXXXX"
                           value={whatsapp}
                           onChange={(e) => setWhatsapp(e.target.value)}
-                          className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#0284C7]"
+                          className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
                         />
                       </div>
                     </div>
@@ -387,7 +387,7 @@ export const ContactView: React.FC<ContactViewProps> = ({ language }) => {
 
                       <button
                         type="submit"
-                        className="inline-flex items-center gap-2 px-7 py-3 rounded-xl bg-[#0284C7] text-white text-xs font-bold hover:bg-sky-600 shadow-sm cursor-pointer"
+                        className="inline-flex items-center gap-2 px-7 py-3 rounded-xl bg-fuchsia-600 text-white text-xs font-bold hover:bg-fuchsia-500 shadow-sm cursor-pointer"
                       >
                         <Sparkles className="w-4 h-4" />
                         <span>Get My Estimate</span>
@@ -430,7 +430,7 @@ export const ContactView: React.FC<ContactViewProps> = ({ language }) => {
 
           {/* Right Column: Direct Channels & Office */}
           <div className="lg:col-span-4 flex flex-col gap-6">
-            <div className="p-6 rounded-3xl bg-[#0B132B] text-white flex flex-col gap-5 shadow-sm">
+            <div className="p-6 rounded-3xl bg-[#0e0520] text-white flex flex-col gap-5 shadow-sm">
               <h3 className="text-base font-bold font-heading">
                 সরাসরি যোগাযোগ করুন
               </h3>
@@ -458,7 +458,7 @@ export const ContactView: React.FC<ContactViewProps> = ({ language }) => {
                   href="tel:+8801700000000"
                   className="flex items-center gap-3 p-3 rounded-xl bg-slate-800/80 hover:bg-slate-800 text-slate-200 hover:text-white transition-colors"
                 >
-                  <div className="w-8 h-8 rounded-lg bg-sky-500/20 text-[#38BDF8] flex items-center justify-center flex-shrink-0">
+                  <div className="w-8 h-8 rounded-lg bg-fuchsia-500/20 text-violet-300 flex items-center justify-center flex-shrink-0">
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>

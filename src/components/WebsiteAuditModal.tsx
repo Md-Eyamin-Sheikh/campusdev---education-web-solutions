@@ -62,9 +62,9 @@ export const WebsiteAuditModal: React.FC<WebsiteAuditModalProps> = ({
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm overflow-y-auto">
       <div className="relative w-full max-w-2xl bg-white rounded-2xl sm:rounded-3xl shadow-2xl border border-slate-200 overflow-hidden my-8">
         {/* Modal Header */}
-        <div className="p-5 sm:p-6 bg-[#0B132B] text-white flex items-center justify-between">
+        <div className="p-5 sm:p-6 bg-[#0e0520] text-white flex items-center justify-between">
           <div className="flex items-center gap-2.5">
-            <div className="w-10 h-10 rounded-xl bg-sky-500/20 border border-sky-500/30 flex items-center justify-center text-[#38BDF8]">
+            <div className="w-10 h-10 rounded-xl bg-violet-500/20 border border-violet-500/30 flex items-center justify-center text-violet-300">
               <Zap className="w-5 h-5" />
             </div>
             <div>
@@ -88,7 +88,7 @@ export const WebsiteAuditModal: React.FC<WebsiteAuditModalProps> = ({
         <div className="p-5 sm:p-6 sm:p-8">
           {!scanComplete && !isScanning && (
             <form onSubmit={handleStartAudit} className="flex flex-col gap-5">
-              <div className="p-4 rounded-xl bg-sky-50 border border-sky-100 text-xs text-sky-900 leading-relaxed">
+              <div className="p-4 rounded-xl bg-fuchsia-950/20 border border-fuchsia-500/10 text-xs text-violet-900 leading-relaxed">
                 {language === 'bn' ? (
                   <p>
                     💡 আপনার বর্তমান স্কুল, কলেজ বা মাদ্রাসার ওয়েবসাইট লিংকটি নিচে দিন। আমাদের ডায়াগনস্টিক ইঞ্জিন মোবাইল ফ্রেন্ডলিনেস, স্পিড, এসইও এবং ডেটা নিরাপত্তা স্কোর তৈরি করবে।
@@ -111,7 +111,7 @@ export const WebsiteAuditModal: React.FC<WebsiteAuditModalProps> = ({
                     placeholder="e.g. www.myschool.edu.bd"
                     value={url}
                     onChange={(e) => setUrl(e.target.value)}
-                    className="w-full pl-4 pr-12 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#0284C7] bg-slate-50 text-sm font-medium"
+                    className="w-full pl-4 pr-12 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-fuchsia-600 bg-slate-50 text-sm font-medium"
                   />
                   <div className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400">
                     <Search className="w-5 h-5" />
@@ -138,9 +138,9 @@ export const WebsiteAuditModal: React.FC<WebsiteAuditModalProps> = ({
 
               <button
                 type="submit"
-                className="w-full py-3.5 rounded-xl bg-[#0B132B] hover:bg-[#14213d] text-white text-sm font-bold flex items-center justify-center gap-2 shadow-md transition-all cursor-pointer"
+                className="w-full py-3.5 rounded-xl bg-[#0e0520] hover:bg-[#14213d] text-white text-sm font-bold flex items-center justify-center gap-2 shadow-md transition-all cursor-pointer"
               >
-                <Zap className="w-4 h-4 text-[#38BDF8]" />
+                <Zap className="w-4 h-4 text-violet-300" />
                 <span>{language === 'bn' ? 'ফ্রি অডিট রিপোর্ট তৈরি করুন' : 'Run Free Website Audit'}</span>
               </button>
             </form>
@@ -150,9 +150,9 @@ export const WebsiteAuditModal: React.FC<WebsiteAuditModalProps> = ({
           {isScanning && (
             <div className="py-12 flex flex-col items-center justify-center text-center gap-4">
               <div className="relative w-16 h-16">
-                <div className="w-16 h-16 rounded-full border-4 border-slate-100 border-t-[#0284C7] animate-spin" />
+                <div className="w-16 h-16 rounded-full border-4 border-slate-100 border-t-fuchsia-600 animate-spin" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <Zap className="w-6 h-6 text-[#0284C7]" />
+                  <Zap className="w-6 h-6 text-fuchsia-600" />
                 </div>
               </div>
 
@@ -194,7 +194,7 @@ export const WebsiteAuditModal: React.FC<WebsiteAuditModalProps> = ({
                 </div>
                 <button
                   onClick={handleReset}
-                  className="inline-flex items-center gap-1 text-xs text-[#0284C7] font-semibold hover:underline cursor-pointer"
+                  className="inline-flex items-center gap-1 text-xs text-fuchsia-400 font-semibold hover:underline cursor-pointer"
                 >
                   <RefreshCw className="w-3.5 h-3.5" />
                   <span>অন্য সাইট অডিট করুন</span>
@@ -257,9 +257,9 @@ export const WebsiteAuditModal: React.FC<WebsiteAuditModalProps> = ({
               </div>
 
               {/* Conversion Offer */}
-              <div className="p-5 rounded-2xl bg-[#0B132B] text-white flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="p-5 rounded-2xl bg-[#0e0520] text-white flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div>
-                  <h5 className="text-sm font-bold flex items-center gap-1.5 text-[#38BDF8]">
+                  <h5 className="text-sm font-bold flex items-center gap-1.5 text-violet-300">
                     <Sparkles className="w-4 h-4" />
                     <span>Need help improving your website?</span>
                   </h5>
@@ -274,7 +274,7 @@ export const WebsiteAuditModal: React.FC<WebsiteAuditModalProps> = ({
                     onClose();
                     onOpenConsultation();
                   }}
-                  className="px-5 py-2.5 rounded-xl bg-[#0284C7] hover:bg-sky-500 text-white text-xs font-bold whitespace-nowrap shadow-sm transition-colors cursor-pointer"
+                  className="px-5 py-2.5 rounded-xl bg-fuchsia-600 hover:bg-fuchsia-500 text-white text-xs font-bold whitespace-nowrap shadow-sm transition-colors cursor-pointer"
                 >
                   {language === 'bn' ? 'ফ্রি কনসালটেশন নিন' : 'Get Free Consultation'}
                 </button>

@@ -52,7 +52,7 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({
               }}
               className={`flex flex-col items-center justify-center min-w-[50px] py-1 px-1 rounded-xl transition-all active:scale-90 cursor-pointer ${
                 isActive 
-                  ? 'text-[#0284C7]' 
+                  ? 'text-fuchsia-400' 
                   : 'text-slate-500 hover:text-slate-800'
               }`}
             >
@@ -63,7 +63,7 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({
                 {language === 'bn' ? item.labelBn : item.labelEn}
               </span>
               {isActive && (
-                <span className="w-1 h-1 rounded-full bg-[#0284C7] mt-0.5" />
+                <span className="w-1 h-1 rounded-full bg-fuchsia-400 mt-0.5" />
               )}
             </button>
           );
@@ -73,9 +73,9 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({
         <button
           id="mobile-bottom-nav-consult-btn"
           onClick={onOpenConsultation}
-          className="flex flex-col items-center justify-center min-w-[50px] py-1 px-1 text-sky-600 transition-all active:scale-90 cursor-pointer group"
+          className="flex flex-col items-center justify-center min-w-[50px] py-1 px-1 text-violet-400 transition-all active:scale-90 cursor-pointer group"
         >
-          <div className="p-1.5 rounded-full bg-gradient-to-tr from-[#0B132B] to-[#0284C7] text-[#38BDF8] shadow-sm group-hover:scale-105 transition-transform">
+          <div className="p-1.5 rounded-full bg-gradient-to-tr from-[#0e0520] to-fuchsia-400 text-violet-300 shadow-sm group-hover:scale-105 transition-transform">
             <Sparkles className="w-4 h-4" />
           </div>
           <span className="text-[10px] tracking-tight font-black text-[#0B1C30] mt-0.5">
