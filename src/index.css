@@ -495,3 +495,24 @@ button:not(:disabled):active {
     opacity: 0.5;
   }
 }
+
+/* ====== ADMIN DEMO PREMIUM POLISH ====== */
+
+/* Premium outer glow ring for admin demo panel */
+#admin-demo-preview [style*="linear-gradient(145deg"] {
+  box-shadow:
+    0 0 0 1px rgba(192, 38, 211, 0.08),
+    0 25px 60px -12px rgba(10, 3, 18, 0.6),
+    0 0 40px rgba(192, 38, 211, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  #admin-demo-preview [style*="linear-gradient(145deg"]:hover {
+    box-shadow:
+      0 0 0 1px rgba(192, 38, 211, 0.15),
+      0 30px 70px -12px rgba(10, 3, 18, 0.7),
+      0 0 50px rgba(192, 38, 211, 0.12),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+}

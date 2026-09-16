@@ -966,18 +966,26 @@ export const HomeView: React.FC<HomeViewProps> = ({
       </section>
 
       {/* 6. SIGNATURE FEATURE: INTERACTIVE ADMIN PANEL DEMO */}
-      <section className="py-8 sm:py-12 md:py-16 bg-slate-100/60 border-b border-slate-200" id="admin-demo-preview">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10">
-            <span className="text-xs font-bold uppercase tracking-wider text-fuchsia-400">
+      <section className="relative py-10 sm:py-14 md:py-20 border-b border-fuchsia-500/10 overflow-hidden" id="admin-demo-preview">
+        {/* Layered ambient gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0312] via-[#0f0624] to-[#0a0312]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_0%,rgba(192,38,211,0.14),transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_50%_at_80%_60%,rgba(139,92,246,0.08),transparent_65%)]" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+            {/* Neon accent line */}
+            <div className="cyber-neon-line w-20 mx-auto mb-5 rounded-full" />
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-fuchsia-950/40 border border-fuchsia-500/20 text-xs font-bold text-fuchsia-300 mb-4 backdrop-blur-sm">
+              <Sparkles className="w-3.5 h-3.5" />
               {language === 'bn' ? 'সিগনেচার ফিচার' : 'Signature Feature'}
             </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold font-heading text-[#0B1C30] mt-1">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold font-heading text-white mt-2 leading-tight">
               {language === 'bn'
-                ? 'Website শুধু দেখতেই সুন্দর নয়—নিজেরাও সহজে পরিচালনা করতে পারবেন।'
-                : 'Websites are not just beautiful — they are effortless for your team to manage.'}
+                ? <>Website শুধু দেখতেই সুন্দর নয়—নিজেরাও{' '}<span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 via-violet-400 to-purple-400">সহজে পরিচালনা</span>{' '}করতে পারবেন।</>
+                : <>Websites are not just beautiful — they are{' '}<span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 via-violet-400 to-purple-400">effortless to manage.</span></>}
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600 mt-2">
+            <p className="text-sm sm:text-base text-violet-200/70 mt-3 max-w-2xl mx-auto">
               {language === 'bn'
                 ? 'নিচে আমাদের ইন্টারেক্টিভ অ্যাডমিন প্যানেলটি নিজে টেস্ট করে দেখুন:'
                 : 'Test our live interactive admin panel simulation below:'}
